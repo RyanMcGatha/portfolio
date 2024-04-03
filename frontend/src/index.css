@@ -8,15 +8,14 @@ body,
   margin: 0;
   padding: 0;
   scrollbar-width: none;
+  min-height: 100vh;
 }
 
-/* For Webkit-based browsers */
 .scrollbar-hidden::-webkit-scrollbar {
   display: none;
 }
 
-/* For IE, Edge, and Firefox */
 .scrollbar-hidden {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

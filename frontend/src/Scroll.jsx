@@ -5,16 +5,9 @@ import { FiDollarSign, FiEye, FiPlay, FiSearch } from "react-icons/fi";
 const Example = () => {
   return (
     <>
-      <div className="flex h-48 flex-col items-center justify-center bg-slate-900">
-        <span className="font-semibold uppercase text-white">Scroll down</span>
-        <span className="mt-2 block rounded-full bg-indigo-600 px-4 py-1 text-center font-medium text-white md:hidden">
-          Note: This is much cooler on desktop 😊
-        </span>
-      </div>
+      <div className="flex h-0 flex-col items-center justify-center "></div>
       <SwapColumnFeatures />
-      <div className="flex h-48 items-center justify-center bg-indigo-600">
-        <span className="font-semibold uppercase text-white">Scroll up</span>
-      </div>
+      <div className="flex h-0 items-center justify-center "></div>
     </>
   );
 };
@@ -23,10 +16,9 @@ const SwapColumnFeatures = () => {
   const [featureInView, setFeatureInView] = useState(features[0]);
 
   return (
-    <section className="relative mx-auto max-w-7xl">
+    <section className="relative mx-auto max-w-screem">
       <SlidingFeatureDisplay featureInView={featureInView} />
 
-      {/* Offsets the height of SlidingFeatureDisplay so that it renders on top of Content to start */}
       <div className="-mt-[100vh] hidden md:block" />
 
       {features.map((s) => (
@@ -113,26 +105,27 @@ const Content = ({ setFeatureInView, featureInView }) => {
 
 const ExampleFeature = ({ featureInView }) => {
   return (
-    <div className="relative h-96 w-full rounded-xl bg-slate-800 shadow-xl">
+    <div className="relative h-96 w-full rounded-xl shadow-xl">
       <div className="flex w-full gap-1.5 rounded-t-xl bg-slate-900 p-3">
         <div className="h-3 w-3 rounded-full bg-red-500" />
         <div className="h-3 w-3 rounded-full bg-yellow-500" />
         <div className="h-3 w-3 rounded-full bg-green-500" />
       </div>
-      <div className="p-2">
+      <span className="">
+        <img
+          src="./src/assets/aboutMe.jpg"
+          alt=""
+          className=" min-h-80 rounded-xl"
+          style={{ objectFit: "cover", minWidth: "100%", maxHeight: "80vh" }}
+        />
+      </span>
+      <div className="relative top-0 left-0 right-0 bottom-0">
         <p className="font-mono text-sm text-slate-200">
-          <span className="text-green-300">~</span> Show a part of your product
-          that explains what{" "}
           <span className="inline-block rounded bg-indigo-600 px-1 font-semibold">
             "{featureInView.title}"
           </span>{" "}
-          means.
         </p>
       </div>
-
-      <span className="absolute left-[50%] top-[50%] -translate-x-[50%] -translate-y-[50%] text-9xl text-slate-700">
-        <featureInView.Icon />
-      </span>
     </div>
   );
 };
@@ -142,38 +135,35 @@ export default Example;
 const features = [
   {
     id: 1,
-    callout: "Get noticed",
+    callout: "About Me",
     title: "It's simple",
     description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor iusto quaerat qui, illo incidunt suscipit fugiat distinctio officia earum eius quae officiis quis harum animi.",
+      "I am a Full Stack Developer with a passion for creating and learning. I have experience with a variety of technologies and am always looking to expand my knowledge.",
+
     contentPosition: "r",
-    Icon: FiEye,
   },
   {
     id: 2,
-    callout: "Find people",
-    title: "They're all here",
+    callout: "My Work",
+    title: "The repo of repos",
     description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor iusto quaerat qui, illo incidunt suscipit fugiat distinctio officia earum eius quae officiis quis harum animi.",
+      "I have a variety of projects on my GitHub that showcase my skills and interests. I am always looking for new projects to work on and new technologies to learn.",
     contentPosition: "l",
-    Icon: FiSearch,
   },
   {
     id: 3,
-    callout: "Have fun",
-    title: "Let's party",
+    callout: "Lets connect",
+    title: "My socials",
     description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor iusto quaerat qui, illo incidunt suscipit fugiat distinctio officia earum eius quae officiis quis harum animi.",
+      "I am always looking to connect with other developers and learn from them. Feel free to reach out to me on LinkedIn or E-mail.",
     contentPosition: "r",
-    Icon: FiPlay,
   },
   {
     id: 4,
-    callout: "Get paid",
+    callout: "idk yet ",
     title: "Cha-ching!",
     description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor iusto quaerat qui, illo incidunt suscipit fugiat distinctio officia earum eius quae officiis quis harum animi.",
+      "I am currently seeking employment as a Full Stack Developer. If you are interested in hiring me, please reach out to me via LinkedIn or E-mail.",
     contentPosition: "l",
-    Icon: FiDollarSign,
   },
 ];

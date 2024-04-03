@@ -28,7 +28,7 @@ import {
 
 const LogoHero = () => {
   return (
-    <section className="bg-transparent py-4">
+    <section className="bg-transparent ">
       <div className="flex  overflow-hidden">
         <TranslateWrapper>
           <LogoItemsTop />
