@@ -12,6 +12,10 @@ import {
 import { HoverImageLinks } from "./HoverImageLinks";
 import LogoHero from "./LogoHero";
 
+import "./index.css";
+
+import Example from "./Scroll";
+
 const COLORS_TOP = ["#13FFAA", "#1E67C6", "#CE84CF", "#DD335C"];
 
 export const AuroraHero = () => {
@@ -68,8 +72,11 @@ export const AuroraHero = () => {
         <div className=" pt-14">
           <LogoHero />
         </div>
+        {/* <HoverImageLinks /> */}
+        <div className="h-screen overflow-auto w-screen z-10 scrollbar-hidden">
+          <Example />
+        </div>
       </div>
-      {/* <HoverImageLinks /> */}
 
       <div className="absolute inset-0 z-0">
         <Canvas>

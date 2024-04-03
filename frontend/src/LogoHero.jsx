@@ -1,21 +1,11 @@
 import { motion } from "framer-motion";
 import {
-  SiNike,
-  Si3M,
-  SiAbstract,
-  SiAdobe,
   SiAirtable,
-  SiAmazon,
   SiBox,
   SiBytedance,
-  SiChase,
   SiCloudbees,
   SiBurton,
   SiBmw,
-  SiHeroku,
-  SiBuildkite,
-  SiCouchbase,
-  SiDailymotion,
   SiDeliveroo,
   SiEpicgames,
   SiGenius,
@@ -113,6 +103,7 @@ const LogoItemsTop = () => (
     <LogoItem Icon={SiGithub} />
     <LogoItem Icon={SiFramer} />
     <LogoItem Icon={SiFastapi} />
+    <LogoItem Icon={SiSupabase} />
   </>
 );
 
