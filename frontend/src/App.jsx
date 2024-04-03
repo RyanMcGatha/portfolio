@@ -6,12 +6,10 @@ import { AuroraBottom } from "./AuroraBottom";
 function App() {
   return (
     <div className="App">
-      <div>
-        <AuroraHero />
-      </div>
-      <div className="bottom">
+      <AuroraHero />
+      {/* <div className="bottom">
         <AuroraBottom />
-      </div>
+      </div> */}
     </div>
   );
 }

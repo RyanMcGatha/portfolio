@@ -9,6 +9,10 @@ import {
   animate,
 } from "framer-motion";
 
+import "./bottom.css";
+
+import { HoverImageLinks } from "./HoverImageLinks";
+
 const COLORS_TOP = ["#13FFAA", "#1E67C6", "#CE84CF", "#DD335C"];
 
 export const AuroraBottom = () => {
@@ -32,11 +36,13 @@ export const AuroraBottom = () => {
       style={{
         backgroundImage,
       }}
-      className="relative grid min-h-screen place-content-center overflow-hidden bg-gray-950 px-4 py-24 text-gray-200"
+      className="relative"
     >
-      <div className="absolute inset-0 z-0">
+      <HoverImageLinks />
+
+      <div className="absolute inset-0 z-0 ">
         <Canvas>
-          <Stars radius={50} count={2500} factor={4} fade speed={2} />
+          <Stars radius={10} count={19500} factor={2} fade speed={1} />
         </Canvas>
       </div>
     </motion.section>
