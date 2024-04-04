@@ -42,7 +42,7 @@ export const AuroraBottom = () => {
 
       <div className="absolute inset-0 z-0 ">
         <Canvas>
-          <Stars radius={10} count={19500} factor={2} fade speed={1} />
+          <Stars radius={40} count={19500} factor={2} fade speed={1} />
         </Canvas>
       </div>
     </motion.section>

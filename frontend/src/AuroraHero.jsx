@@ -39,51 +39,45 @@ export const AuroraHero = () => {
       style={{
         backgroundImage,
       }}
-      className="relative flex flex-col items-center min-h-screen max-h-full  min-w-screen max-w-screen bg-gray-950   text-gray-200"
+      className="relative flex flex-col align-center bg-gray-950  text-gray-200"
     >
-      <div
-        className="relative z-10 pt-20  flex flex-col items-center"
-        style={{
-          backgroundImage,
-        }}
-      >
-        <h1 className=" max-w-3xl bg-gradient-to-br from-white to-gray-400 bg-clip-text text-center text-3xl font-medium leading-tight text-transparent sm:text-7xl sm:leading-tight md:text-9xl md:max-w-7xl">
-          Ryan McGatha <br />
-          Full Stack Developer
-        </h1>
-        <p className="my-6 max-w-xl text-center text-base leading-relaxed md:text-lg md:leading-relaxed"></p>
+      <LogoHero />
 
+      <div className="relative z-10 flex flex-col items-center ">
+        <span className="mb-1.5 mt-16 inline-block rounded-full bg-gray-600/50 px-3 py-1.5 text-sm md:scale-150">
+          Actively Seeking Employment!
+        </span>
+        <h1 className="mb-20 bg-gradient-to-br from-white to-gray-400 bg-clip-text text-center font-medium leading-tight text-transparent sm:text-6xl md:text-9xl md:leading-tight">
+          Ryan McGatha <br /> Software Developer
+        </h1>
+        {/* <p className="my-5  text-center text-base leading-relaxed md:text-2xl md:leading-relaxed">
+          Scroll to discover my passion.
+        </p> */}
         <motion.button
           style={{
             border,
             boxShadow,
-            scale: ".8",
           }}
           whileHover={{
-            scale: 1.515,
+            scale: 1.015,
           }}
           whileTap={{
             scale: 0.985,
           }}
-          onClick={() => {
-            window.location.href = "https://github.com/RyanMcGatha";
-          }}
-          className="mb-24 mt-10 group relative text-4xl flex w-fit items-center gap-1.5 rounded-full bg-gray-950/10 px-4 py-2 text-gray-50 transition-colors hover:bg-gray-950/50"
+          className="group relative flex w-fit items-center gap-1.5 rounded-full bg-gray-950/10 px-4 py-2 text-gray-50 transition-colors hover:bg-gray-950/50 md:scale-150 md:px-6 md:py-3 md:text-2xl md:gap-2 md:rounded-2xl md:shadow-lg md:border-2 md:border-gray-50 md:transition-transform md:transition-shadow"
         >
-          View Projects
-          <FiArrowRight className="transition-transform group-hover:-rotate-45 group-active:-rotate-12" />
+          Scroll To Start !
+          {/* <FiArrowRight className="transition-transform group-hover:-rotate-45 group-active:-rotate-12" />x */}
         </motion.button>
-        <div className="">
-          <LogoHero />
-        </div>
+        <div className="pt-10 z-0 "></div>
       </div>
-      <div className=" pt-20 z-10 scrollbar-hidden  min-h-screen ">
+      <div className=" z-10 scrollbar-hidden bg-transparentx max-w-screen ">
         <Example />
       </div>
 
       <div className="absolute inset-0 z-0 overflow-visible">
         <Canvas>
-          <Stars radius={0} count={119500} factor={2} fade speed={1} />
+          <Stars radius={60} count={99999} factor={3} fade speed={1} />
         </Canvas>
       </div>
     </motion.section>

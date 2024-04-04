@@ -5,9 +5,9 @@ import { FiDollarSign, FiEye, FiPlay, FiSearch } from "react-icons/fi";
 const Example = () => {
   return (
     <>
-      <div className="flex h-0 flex-col items-center justify-center "></div>
+      <div className="flex h-4 flex-col items-center justify-center "></div>
       <SwapColumnFeatures />
-      <div className="flex h-0 items-center justify-center "></div>
+      <div className="flex h-4 items-center justify-center "></div>
     </>
   );
 };
@@ -84,11 +84,15 @@ const Content = ({ setFeatureInView, featureInView }) => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: "easeInOut" }}
         >
-          <span className="rounded-full bg-indigo-600 px-2 py-1.5 text-xs font-medium text-white">
+          <span className="rounded-full bg-indigo-600 px-2 py-1.5 text-xs font-medium ">
             {featureInView.callout}
           </span>
-          <p className="my-3 text-5xl font-bold">{featureInView.title}</p>
-          <p className="text-slate-600">{featureInView.description}</p>
+          <p className="my-3 text-5xl font-bold bg-gradient-to-br from-white to-gray-400 bg-clip-text">
+            {featureInView.title}
+          </p>
+          <p className="bg-gradient-to-br from-white to-gray-400 bg-clip-text">
+            {featureInView.description}
+          </p>
         </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 25 }}
@@ -113,14 +117,18 @@ const ExampleFeature = ({ featureInView }) => {
       </div>
       <span className="">
         <img
-          src="./src/assets/aboutMe.jpg"
-          alt=""
+          src={featureInView.imgSrc}
           className=" min-h-80 rounded-xl"
-          style={{ objectFit: "cover", minWidth: "100%", maxHeight: "80vh" }}
+          style={{
+            objectFit: "cover",
+            minWidth: "100%",
+            maxHeight: "60vh",
+            maxWidth: "100%",
+          }}
         />
       </span>
       <div className="relative top-0 left-0 right-0 bottom-0">
-        <p className="font-mono text-sm text-slate-200">
+        <p className="font-mono text-sm bg-gradient-to-br from-white to-gray-400 bg-clip-text">
           <span className="inline-block rounded bg-indigo-600 px-1 font-semibold">
             "{featureInView.title}"
           </span>{" "}
@@ -141,6 +149,8 @@ const features = [
       "I am a Full Stack Developer with a passion for creating and learning. I have experience with a variety of technologies and am always looking to expand my knowledge.",
 
     contentPosition: "r",
+    imgSrc:
+      "https://yhxzzowpqrerphvfdlkj.supabase.co/storage/v1/object/sign/imgs/sashaqphotography-84.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJpbWdzL3Nhc2hhcXBob3RvZ3JhcGh5LTg0LmpwZyIsImlhdCI6MTcxMjIzOTUzMywiZXhwIjoxNzQzNzc1NTMzfQ.aQ8USaCVpsEsUEpsGsa7n38opKxXkk8UEYu7Tt3oS1Q&t=2024-04-04T14%3A05%3A33.981Z",
   },
   {
     id: 2,
@@ -149,21 +159,23 @@ const features = [
     description:
       "I have a variety of projects on my GitHub that showcase my skills and interests. I am always looking for new projects to work on and new technologies to learn.",
     contentPosition: "l",
+    imgSrc:
+      "https://beecrowd.io/wp-content/uploads/2022/08/Beecrowd-Agosto-6-02-larger.png",
   },
-  {
-    id: 3,
-    callout: "Lets connect",
-    title: "My socials",
-    description:
-      "I am always looking to connect with other developers and learn from them. Feel free to reach out to me on LinkedIn or E-mail.",
-    contentPosition: "r",
-  },
-  {
-    id: 4,
-    callout: "idk yet ",
-    title: "Cha-ching!",
-    description:
-      "I am currently seeking employment as a Full Stack Developer. If you are interested in hiring me, please reach out to me via LinkedIn or E-mail.",
-    contentPosition: "l",
-  },
+  // {
+  //   id: 3,
+  //   callout: "Lets connect",
+  //   title: "My socials",
+  //   description:
+  //     "I am always looking to connect with other developers and learn from them. Feel free to reach out to me on LinkedIn or E-mail.",
+  //   contentPosition: "r",
+  // },
+  // {
+  //   id: 4,
+  //   callout: "idk yet ",
+  //   title: "Cha-ching!",
+  //   description:
+  //     "I am currently seeking employment as a Full Stack Developer. If you are interested in hiring me, please reach out to me via LinkedIn or E-mail.",
+  //   contentPosition: "l",
+  // },
 ];
