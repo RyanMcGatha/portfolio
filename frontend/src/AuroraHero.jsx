@@ -47,7 +47,7 @@ export const AuroraHero = () => {
           backgroundImage,
         }}
       >
-        <h1 className=" max-w-3xl bg-gradient-to-br from-white to-gray-400 bg-clip-text text-center text-3xl font-medium leading-tight text-transparent sm:text-5xl sm:leading-tight md:text-9xl md:max-w-7xl">
+        <h1 className=" max-w-3xl bg-gradient-to-br from-white to-gray-400 bg-clip-text text-center text-3xl font-medium leading-tight text-transparent sm:text-7xl sm:leading-tight md:text-9xl md:max-w-7xl">
           Ryan McGatha <br />
           Full Stack Developer
         </h1>
@@ -57,7 +57,7 @@ export const AuroraHero = () => {
           style={{
             border,
             boxShadow,
-            scale: "1.5",
+            scale: ".8",
           }}
           whileHover={{
             scale: 1.515,
@@ -77,7 +77,7 @@ export const AuroraHero = () => {
           <LogoHero />
         </div>
       </div>
-      <div className=" z-10 scrollbar-hidden  min-h-screen ">
+      <div className=" pt-20 z-10 scrollbar-hidden  min-h-screen ">
         <Example />
       </div>
 
