@@ -5,9 +5,7 @@ import { FiDollarSign, FiEye, FiPlay, FiSearch } from "react-icons/fi";
 const Example = () => {
   return (
     <>
-      <div className="flex h-4 flex-col items-center justify-center "></div>
       <SwapColumnFeatures />
-      <div className="flex h-4 items-center justify-center "></div>
     </>
   );
 };
@@ -108,11 +106,12 @@ const Content = ({ setFeatureInView, featureInView }) => {
 };
 
 const ExampleFeature = ({ featureInView }) => {
-  const isAboutMe = featureInView.callout === "About Me";
-  const githubUrl = "https://github.com/yourUsername";
   return (
-    <div className="relative h-96 w-full rounded-xl shadow-xl">
-      <div className="flex w-full gap-1.5 rounded-t-xl bg-slate-900 p-3">
+    <div
+      className="relative h-full  rounded-xl shadow-xl"
+      style={featureInView.style}
+    >
+      <div className="flex max-w-full gap-1.5 rounded-t-xl bg-slate-900 p-3">
         <div className="h-3 w-3 rounded-full bg-red-500" />
         <div className="h-3 w-3 rounded-full bg-yellow-500" />
         <div className="h-3 w-3 rounded-full bg-green-500" />
@@ -120,12 +119,9 @@ const ExampleFeature = ({ featureInView }) => {
       <span className="z-10">
         <img
           src={featureInView.imgSrc}
-          className="z-10 min-h-80 rounded-xl"
+          className="z-10 max-h-full rounded-xl"
           style={{
             objectFit: "cover",
-            minWidth: "100%",
-            maxHeight: "60vh",
-            maxWidth: "100%",
           }}
         />
       </span>
@@ -149,7 +145,7 @@ const features = [
     title: "It's simple",
     description:
       "I am a Full Stack Developer with a passion for creating and learning. I have experience with a variety of technologies and am always looking to expand my knowledge.",
-
+    style: { minHeight: "100vh" },
     contentPosition: "r",
     imgSrc:
       "https://yhxzzowpqrerphvfdlkj.supabase.co/storage/v1/object/sign/imgs/sashaqphotography-84.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJpbWdzL3Nhc2hhcXBob3RvZ3JhcGh5LTg0LmpwZyIsImlhdCI6MTcxMjIzOTUzMywiZXhwIjoxNzQzNzc1NTMzfQ.aQ8USaCVpsEsUEpsGsa7n38opKxXkk8UEYu7Tt3oS1Q&t=2024-04-04T14%3A05%3A33.981Z",
