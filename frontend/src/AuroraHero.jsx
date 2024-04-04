@@ -39,7 +39,7 @@ export const AuroraHero = () => {
       style={{
         backgroundImage,
       }}
-      className="relative sm:pt-5 flex flex-col align-center bg-gray-950  text-gray-200"
+      className="relative sm:pt-5 overflow-visible flex flex-col align-center bg-gray-950  text-gray-200"
     >
       <LogoHero />
 
@@ -59,21 +59,24 @@ export const AuroraHero = () => {
             boxShadow,
           }}
           whileHover={{
-            scale: 1.015,
+            scale: 1.1,
           }}
           whileTap={{
             scale: 0.985,
           }}
           className="group relative flex w-fit items-center gap-1.5 rounded-full bg-gray-950/10 px-4 py-2 text-gray-50 transition-colors hover:bg-gray-950/50 md:scale-150 md:px-6 md:py-3 md:text-2xl md:gap-2 md:rounded-2xl md:shadow-lg md:border-2 md:border-gray-50 sm:text-xl sm:mt-3"
+          onClick={() => {
+            window.scrollTo({ top: window.innerHeight, behavior: "smooth" });
+          }}
         >
-          Scroll To Start !
-          {/* <FiArrowRight className="transition-transform group-hover:-rotate-45 group-active:-rotate-12" />x */}
+          Click To Start
+          <FiArrowRight className="transition-transform group-hover:-rotate-45 group-active:-rotate-12" />
         </motion.button>
-        <div className="pt-10 z-0 overflow-hidden max-h-0 sm:max-h-full sm:mb-8 sm:mt-7">
+        <div className="pt-10 z-0 overflow-hidden max-h-0 max-w-0 sm:max-h-full sm:max-w-full sm:mb-8 sm:mt-7">
           <LogoHero />
         </div>
       </div>
-      <div className=" z-10 scrollbar-hidden bg-transparentx max-w-screen ">
+      <div className=" z-10 scrollbar-hidden bg-transparentx max-w-screen h-full ">
         <Example />
       </div>
 
