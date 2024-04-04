@@ -108,6 +108,8 @@ const Content = ({ setFeatureInView, featureInView }) => {
 };
 
 const ExampleFeature = ({ featureInView }) => {
+  const isAboutMe = featureInView.callout === "About Me";
+  const githubUrl = "https://github.com/yourUsername";
   return (
     <div className="relative h-96 w-full rounded-xl shadow-xl">
       <div className="flex w-full gap-1.5 rounded-t-xl bg-slate-900 p-3">
@@ -115,10 +117,10 @@ const ExampleFeature = ({ featureInView }) => {
         <div className="h-3 w-3 rounded-full bg-yellow-500" />
         <div className="h-3 w-3 rounded-full bg-green-500" />
       </div>
-      <span className="">
+      <span className="z-10">
         <img
           src={featureInView.imgSrc}
-          className=" min-h-80 rounded-xl"
+          className="z-10 min-h-80 rounded-xl"
           style={{
             objectFit: "cover",
             minWidth: "100%",
