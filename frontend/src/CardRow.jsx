@@ -51,6 +51,7 @@ const Card = ({ card }) => {
           backgroundSize: "cover",
           backgroundPosition: "center",
           minWidth: "100%",
+          backgroundColor: "black",
         }}
         className="absolute inset-0 z-0 transition-transform duration-300 group-hover:scale-110"
       ></div>
@@ -68,37 +69,37 @@ export default CardRow;
 const cards = [
   {
     url: "https://yhxzzowpqrerphvfdlkj.supabase.co/storage/v1/object/sign/imgs/ss.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJpbWdzL3NzLnBuZyIsImlhdCI6MTcxMjMyMjc2MSwiZXhwIjoxNzQzODU4NzYxfQ.Vlv95t5VWVbrUpeZ9Umphwrgk4jvMNWjzG2wFXo6mtg&t=2024-04-05T13%3A12%3A41.146Z",
-    title: "...",
+    title: "Sullys Steamers Document Manager",
     id: 1,
   },
   {
     url: "https://yhxzzowpqrerphvfdlkj.supabase.co/storage/v1/object/sign/imgs/port-ss.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJpbWdzL3BvcnQtc3MucG5nIiwiaWF0IjoxNzEyMzI1NTk4LCJleHAiOjE3NDM4NjE1OTh9.60rQNLfBqn8MxSm-mFfW2KTChQzUumPxTI7Bl8OkHWA&t=2024-04-05T13%3A59%3A58.780Z",
-    title: "...",
+    title: "Personal Portfollio Website",
     id: 2,
   },
   {
     url: "",
-    title: "...",
+    title: "Coming Soon!",
     id: 3,
   },
   {
     url: "",
-    title: "...",
+    title: "Coming Soon!",
     id: 4,
   },
   {
     url: "",
-    title: "...",
+    title: "Coming Soon!",
     id: 5,
   },
   {
     url: "",
-    title: "...",
+    title: "Coming Soon!",
     id: 6,
   },
   {
     url: "",
-    title: "...",
+    title: "Coming Soon!",
     id: 7,
   },
 ];

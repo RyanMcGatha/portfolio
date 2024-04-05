@@ -4,11 +4,9 @@
 
 body {
   background-color: black;
-  overflow-x: hidden;
-  overflow-y: auto;
 }
 
-.scrollbar-hidden::-webkit-scrollbar {
+:root::-webkit-scrollbar {
   display: none;
 }
 

@@ -2,6 +2,8 @@ import { motion, useInView } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { FiDollarSign, FiEye, FiPlay, FiSearch } from "react-icons/fi";
 
+import CardRow from "./CardRow";
+
 const Example = () => {
   return (
     <>
@@ -38,7 +40,7 @@ const SlidingFeatureDisplay = ({ featureInView }) => {
         justifyContent:
           featureInView.contentPosition === "l" ? "flex-end" : "flex-start",
       }}
-      className="pointer-events-none sticky top-0 z-10 hidden h-screen w-full items-center justify-center md:flex"
+      className="pointer-events-none sticky top-0 z-10 hidden h-screen items-center justify-center md:flex"
     >
       <motion.div
         layout
@@ -70,13 +72,13 @@ const Content = ({ setFeatureInView, featureInView }) => {
   return (
     <section
       ref={ref}
-      className="relative z-0 flex h-fit md:h-screen"
+      className="relative min-w-screen overflow-visible z-10 flex h-fit md:h-screen"
       style={{
         justifyContent:
           featureInView.contentPosition === "l" ? "flex-start" : "flex-end",
       }}
     >
-      <div className="grid h-full w-full place-content-center px-4 py-12 md:w-2/5 md:px-8 md:py-8">
+      <div className="grid overflow-visible h-full min-w-screen place-content-center px-4 py-12 md:w-2/5 md:px-8 md:py-8">
         <motion.div
           initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -111,6 +113,7 @@ const ExampleFeature = ({ featureInView }) => {
       className="relative h-full  rounded-xl shadow-xl"
       style={featureInView.style}
     >
+      <div className="min-w-screen">{featureInView.div}</div>
       <div className="flex max-w-full gap-1.5 rounded-t-xl bg-slate-900 p-3">
         <div className="h-3 w-3 rounded-full bg-red-500" />
         <div className="h-3 w-3 rounded-full bg-yellow-500" />
@@ -127,9 +130,9 @@ const ExampleFeature = ({ featureInView }) => {
       </span>
       {/* <div className="relative top-0 left-0 right-0 bottom-0">
         <p className="font-mono text-sm bg-gradient-to-br from-white to-gray-400 bg-clip-text">
-          <span className="inline-block rounded bg-indigo-600 px-1 font-semibold">
-            "{featureInView.title}"
-          </span>{" "}
+        <span className="inline-block rounded bg-indigo-600 px-1 font-semibold">
+        "{featureInView.title}"
+        </span>{" "}
         </p>
       </div> */}
     </div>

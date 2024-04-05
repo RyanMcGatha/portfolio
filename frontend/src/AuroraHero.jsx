@@ -39,7 +39,7 @@ export const AuroraHero = () => {
         backgroundImage,
         backgroundAttachment: "fixed",
       }}
-      className="relative sm:pt-5 flex flex-col align-center bg-gray-950  text-gray-200"
+      className="relative sm:pt-5 flex flex-col align-center bg-gray-950  text-gray-200  "
     >
       <LogoHero />
 
@@ -65,21 +65,15 @@ export const AuroraHero = () => {
         >
           Click or Scroll To Start
         </motion.button>
-        <div className="pt-10 overflow-hidden md:max-h-0">
-          <LogoHero />
-        </div>
       </div>
-      <div className=" z-10 scrollbar-hidden bg-transparentx min-h-screen ">
+      <div className=" z-10 ">
         <Example />
       </div>
-      <div>
+      <div className="z-10">
         <CardRow />
       </div>
 
-      <div
-        className="absolute inset-0 overflow-visible z-10"
-        style={{ backgroundAttachment: "fixed" }}
-      >
+      <div className="absolute inset-0 overflow-visible z-0">
         <Canvas>
           <Stars radius={50} count={99999} factor={8} fade speed={2} />
         </Canvas>
