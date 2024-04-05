@@ -31,7 +31,7 @@ export const AuroraHero = () => {
 
   const backgroundImage = useMotionTemplate`radial-gradient(125% 125% at 50% 0%, #020617 50%, ${color})`;
   const border = useMotionTemplate`1px solid ${color}`;
-  const textShadow = useMotionTemplate`0px 4px 24px ${color}`;
+  const boxShadow = useMotionTemplate`0px 4px 24px ${color}`;
 
   return (
     <motion.section
@@ -39,7 +39,7 @@ export const AuroraHero = () => {
         backgroundImage,
         backgroundAttachment: "fixed",
       }}
-      className="relative sm:pt-5 overflow-visible flex flex-col align-center bg-gray-950  text-gray-200"
+      className="relative sm:pt-5 flex flex-col align-center bg-gray-950  text-gray-200"
     >
       <LogoHero />
 
@@ -52,15 +52,10 @@ export const AuroraHero = () => {
         </h1>
         <motion.button
           style={{
-            textShadow,
-            backgroundClip: "text",
-            color: "white",
-            fillter: "drop-shadow(0px 4px 24px #13FFAA)",
+            border,
+            boxShadow,
           }}
-          whileHover={{
-            scale: 1.1,
-          }}
-          className="group md:mb-40 relative flex w-fit items-center gap-1.5 rounded-full bg-gray-950/10 px-4 py-2 text-gray-50 transition-colors hover:bg-gray-950/50 md:scale-150 md:px-6 md:py-3 md:text-4xl md:gap-2 md:rounded-8xl md:shadow-lg sm:text-xl sm:mt-3"
+          className="group md:mb-40 relative flex w-fit items-center gap-1.5 rounded-full bg-gray-950/10 px-4 py-2 text-gray-50 transition-colors hover:bg-gray-950/50 md:px-6 md:py-3 md:text-4xl md:gap-2 md:rounded-8xl md:shadow-lg sm:text-xl sm:mt-3"
           onClick={() => {
             window.scrollTo({
               top: window.scrollTo(1000, 1000),
@@ -68,22 +63,25 @@ export const AuroraHero = () => {
             });
           }}
         >
-          Scroll To Start
+          Click or Scroll To Start
         </motion.button>
-        <div className="pt-10 z-0 overflow-hidden max-h-0 max-w-0 sm:max-h-full sm:mb-8 sm:mt-7">
+        <div className="pt-10 overflow-hidden md:max-h-0">
           <LogoHero />
         </div>
       </div>
-      <div className=" z-10 scrollbar-hidden bg-transparentx max-w-screen h-full ">
+      <div className=" z-10 scrollbar-hidden bg-transparentx min-h-screen ">
         <Example />
       </div>
       <div>
         <CardRow />
       </div>
 
-      <div className="absolute inset-0 z-0 overflow-visible">
+      <div
+        className="absolute inset-0 overflow-visible z-10"
+        style={{ backgroundAttachment: "fixed" }}
+      >
         <Canvas>
-          <Stars radius={60} count={99999} factor={3} fade speed={1} />
+          <Stars radius={50} count={99999} factor={8} fade speed={2} />
         </Canvas>
       </div>
     </motion.section>

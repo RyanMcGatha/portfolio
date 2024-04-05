@@ -3,11 +3,7 @@ import React from "react";
 import { AuroraHero } from "./AuroraHero";
 
 function App() {
-  return (
-    <div className="App">
-      <AuroraHero />
-    </div>
-  );
+  return <AuroraHero />;
 }
 
 export default App;

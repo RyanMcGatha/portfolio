@@ -125,13 +125,13 @@ const ExampleFeature = ({ featureInView }) => {
           }}
         />
       </span>
-      <div className="relative top-0 left-0 right-0 bottom-0">
+      {/* <div className="relative top-0 left-0 right-0 bottom-0">
         <p className="font-mono text-sm bg-gradient-to-br from-white to-gray-400 bg-clip-text">
           <span className="inline-block rounded bg-indigo-600 px-1 font-semibold">
             "{featureInView.title}"
           </span>{" "}
         </p>
-      </div>
+      </div> */}
     </div>
   );
 };
@@ -145,7 +145,6 @@ const features = [
     title: "It's simple",
     description:
       "I am a Full Stack Developer with a passion for creating and learning. I have experience with a variety of technologies and am always looking to expand my knowledge.",
-    style: { minHeight: "100vh" },
     contentPosition: "r",
     imgSrc:
       "https://yhxzzowpqrerphvfdlkj.supabase.co/storage/v1/object/sign/imgs/sashaqphotography-84.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJpbWdzL3Nhc2hhcXBob3RvZ3JhcGh5LTg0LmpwZyIsImlhdCI6MTcxMjIzOTUzMywiZXhwIjoxNzQzNzc1NTMzfQ.aQ8USaCVpsEsUEpsGsa7n38opKxXkk8UEYu7Tt3oS1Q&t=2024-04-04T14%3A05%3A33.981Z",

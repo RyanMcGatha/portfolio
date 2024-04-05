@@ -4,16 +4,15 @@ import { useRef } from "react";
 const CardRow = () => {
   return (
     <div className="">
-      <div className="flex h-48 items-center justify-center">
-        <span className="font-semibold uppercase text-neutral-500">
-          Scroll down
-        </span>
+      <div className="flex h-0 items-center justify-center">
+        <h1 className=" bg-gradient-to-br from-white to-gray-400 bg-clip-text text-center  text-transparent md:text-8xl md:leading-tight sm:text-6xl sm:pt-4 sm:mb-6">
+          Projects
+        </h1>
+        <span className="font-semibold uppercase text-neutral-500"></span>
       </div>
       <HorizontalScrollCarousel />
-      <div className="flex h-48 items-center justify-center">
-        <span className="font-semibold uppercase text-neutral-500">
-          Scroll up
-        </span>
+      <div className="flex h-0 items-center justify-center">
+        <span className="font-semibold uppercase text-neutral-500"></span>
       </div>
     </div>
   );
@@ -51,6 +50,7 @@ const Card = ({ card }) => {
           backgroundImage: `url(${card.url})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
+          minWidth: "100%",
         }}
         className="absolute inset-0 z-0 transition-transform duration-300 group-hover:scale-110"
       ></div>
@@ -67,38 +67,38 @@ export default CardRow;
 
 const cards = [
   {
-    url: "/imgs/abstract/1.jpg",
-    title: "Title 1",
+    url: "https://yhxzzowpqrerphvfdlkj.supabase.co/storage/v1/object/sign/imgs/ss.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJpbWdzL3NzLnBuZyIsImlhdCI6MTcxMjMyMjc2MSwiZXhwIjoxNzQzODU4NzYxfQ.Vlv95t5VWVbrUpeZ9Umphwrgk4jvMNWjzG2wFXo6mtg&t=2024-04-05T13%3A12%3A41.146Z",
+    title: "...",
     id: 1,
   },
   {
-    url: "/imgs/abstract/2.jpg",
-    title: "Title 2",
+    url: "https://yhxzzowpqrerphvfdlkj.supabase.co/storage/v1/object/sign/imgs/port-ss.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJpbWdzL3BvcnQtc3MucG5nIiwiaWF0IjoxNzEyMzI1NTk4LCJleHAiOjE3NDM4NjE1OTh9.60rQNLfBqn8MxSm-mFfW2KTChQzUumPxTI7Bl8OkHWA&t=2024-04-05T13%3A59%3A58.780Z",
+    title: "...",
     id: 2,
   },
   {
-    url: "/imgs/abstract/3.jpg",
-    title: "Title 3",
+    url: "",
+    title: "...",
     id: 3,
   },
   {
-    url: "/imgs/abstract/4.jpg",
-    title: "Title 4",
+    url: "",
+    title: "...",
     id: 4,
   },
   {
-    url: "/imgs/abstract/5.jpg",
-    title: "Title 5",
+    url: "",
+    title: "...",
     id: 5,
   },
   {
-    url: "/imgs/abstract/6.jpg",
-    title: "Title 6",
+    url: "",
+    title: "...",
     id: 6,
   },
   {
-    url: "/imgs/abstract/7.jpg",
-    title: "Title 7",
+    url: "",
+    title: "...",
     id: 7,
   },
 ];

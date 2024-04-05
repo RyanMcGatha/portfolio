@@ -2,17 +2,10 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-body,
-#root,
-:root {
-  margin: 0;
-  padding: 0;
-  scrollbar-width: none;
-  min-height: 100vh;
-}
 body {
-  max-width: fit-content;
+  background-color: black;
   overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .scrollbar-hidden::-webkit-scrollbar {
