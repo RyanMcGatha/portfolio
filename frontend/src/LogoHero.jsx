@@ -28,7 +28,7 @@ import {
 
 const LogoHero = () => {
   return (
-    <section className="bg-transparent ">
+    <section className="bg-transparent max-h-full mt-10 ">
       <div className="flex  overflow-hidden">
         <TranslateWrapper>
           <LogoItemsTop />
@@ -40,7 +40,7 @@ const LogoHero = () => {
           <LogoItemsTop />
         </TranslateWrapper>
       </div>
-      <div className="flex overflow-hidden mt-4">
+      <div className="flex overflow-hidden ">
         <TranslateWrapper reverse>
           <LogoItemsBottom />
         </TranslateWrapper>

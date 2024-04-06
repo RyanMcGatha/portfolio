@@ -41,8 +41,6 @@ export const AuroraHero = () => {
       }}
       className="relative sm:pt-5 flex flex-col align-center bg-gray-950  text-gray-200  "
     >
-      <LogoHero />
-
       <div className="relative z-10 flex flex-col items-center sm:mb-0 ">
         <span className="mb-1.5 mt-16 inline-block rounded-full bg-gray-600/50 px-3 py-1.5 text-sm sm:mt-8">
           Actively Seeking Employment!
@@ -50,7 +48,7 @@ export const AuroraHero = () => {
         <h1 className="mb-20 bg-gradient-to-br from-white to-gray-400 bg-clip-text text-center  text-transparent md:text-8xl md:leading-tight sm:text-6xl sm:pt-4 sm:mb-6">
           Ryan McGatha <br /> Software Developer
         </h1>
-        <motion.button
+        {/* <motion.button
           style={{
             border,
             boxShadow,
@@ -64,8 +62,9 @@ export const AuroraHero = () => {
           }}
         >
           Click or Scroll To Start
-        </motion.button>
+        </motion.button> */}
       </div>
+      <LogoHero />
       <div className=" z-10 ">
         <Example />
       </div>
