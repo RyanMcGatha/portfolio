@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import { useScroll, useTransform, motion } from "framer-motion";
+import { DragCloseDrawerExample } from "./ProjectsModals";
 
 export const DisappearingFeatures = () => {
   return (
@@ -73,7 +74,7 @@ const Carousel = () => {
             position={index + 1}
             numItems={imageUrls.length}
             img={img}
-            url={projectUrls[index]}
+            // url={projectUrls[index]}
           />
         ))}
       </div>
@@ -101,10 +102,13 @@ const CarouselItem = ({ img, url, scrollYProgress, position, numItems }) => {
         style={{ opacity, scale }}
         className="grid aspect-video w-full shrink-0 place-content-center rounded-2xl bg-neutral-900 p-4"
       >
+        <div className="">
+          <DragCloseDrawerExample />
+        </div>
         <img
           src={img}
           alt="Project screenshot"
-          className="max-w-full h-auto rounded-2xl"
+          className="max-w-full h-auto rounded-2xl object-cover"
         />
       </motion.div>
     </a>
