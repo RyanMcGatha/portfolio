@@ -1,5 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
+import CollapseCardFeatures from "./Socials";
 
 const Example = () => {
   return (
@@ -22,7 +23,7 @@ const SwapColumnFeatures = () => {
   const [featureInView, setFeatureInView] = useState(features[0]);
 
   return (
-    <section className="relative mx-auto max-w-7xl">
+    <section className="relative mx-auto max-w-screen">
       <SlidingFeatureDisplay featureInView={featureInView} />
 
       {/* Offsets the height of SlidingFeatureDisplay so that it renders on top of Content to start */}
@@ -79,7 +80,7 @@ const Content = ({ setFeatureInView, featureInView }) => {
   return (
     <section
       ref={ref}
-      className="relative z-0 flex h-fit md:h-screen"
+      className="relative z-10 flex h-fit md:h-screen"
       style={{
         justifyContent:
           featureInView.contentPosition === "l" ? "flex-start" : "flex-end",
@@ -114,28 +115,20 @@ const Content = ({ setFeatureInView, featureInView }) => {
 
 const ExampleFeature = ({ featureInView }) => {
   return (
-    <div
-      className="relative rounded-xl shadow-xl"
-      style={{
-        ...featureInView.style,
-        backgroundImage: `url(${featureInView.backgroundImage})`,
-        backgroundSize: featureInView.size,
-        minHeight: featureInView.minH,
-        maxHeight: featureInView.maxH,
-        minWidth: featureInView.minW,
-        scale: featureInView.scale,
-      }}
-    >
-      <div className="flex w-full gap-1.5 rounded-t-xl bg-transparent p-3">
+    <div className="relative h-max w-fit rounded-xl z-0 shadow-xl" style={{}}>
+      <div className="flex w-full gap-1.5 rounded-t-xl bg-slate-800 p-3">
         <div className="h-3 w-3 rounded-full bg-red-500" />
         <div className="h-3 w-3 rounded-full bg-yellow-500" />
         <div className="h-3 w-3 rounded-full bg-green-500" />
       </div>
-      <div className="p-2">
-        <p className="font-mono text-sm text-slate-200"></p>
+      <div className="">
+        <img
+          src={featureInView.img}
+          style={{ maxHeight: featureInView.maxH }}
+          className=""
+        />
       </div>
-
-      <span className="absolute left-[50%] top-[50%] -translate-x-[50%] -translate-y-[50%] text-9xl text-slate-700"></span>
+      <div className=" z-40">{featureInView.div}</div>
     </div>
   );
 };
@@ -150,11 +143,8 @@ const features = [
     description:
       "I'm Ryan McGatha, a recent Carolina Code School graduate, where I sharpened my development skills amidst a hands-on project that marked my transition from the culinary service of steaming bagels at Sully's Steamers to impacting its corporate strategies through software. Specializing in React, PostgreSQL, Tailwind CSS, and Supabase, my journey intertwined with developing a pivotal document management system for Sully's while I was immersed in coding education. This endeavor not only propelled operational efficiencies within Sully's but also underscored my ability to apply learning in real-time to support expansive business objectives. Now, as I step forward into my professional career, I'm enthusiastic about embracing new challenges and crafting innovative solutions.",
     contentPosition: "r",
-    minH: "85vh",
-    scale: ".8",
-    size: "100%",
-    backgroundImage:
-      "https://yhxzzowpqrerphvfdlkj.supabase.co/storage/v1/object/sign/imgs/IMG_0947.JPG?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJpbWdzL0lNR18wOTQ3LkpQRyIsImlhdCI6MTcxMjQ0MDEwMiwiZXhwIjoxNzQzOTc2MTAyfQ.LEmMyS8KVEkoeIw0tapivs-eoMLUQWPj1NdeQzr7PdY&t=2024-04-06T21%3A48%3A22.192Z",
+    maxH: "80vh",
+    img: "https://yhxzzowpqrerphvfdlkj.supabase.co/storage/v1/object/sign/imgs/IMG_0947.JPG?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJpbWdzL0lNR18wOTQ3LkpQRyIsImlhdCI6MTcxMjQ0MDEwMiwiZXhwIjoxNzQzOTc2MTAyfQ.LEmMyS8KVEkoeIw0tapivs-eoMLUQWPj1NdeQzr7PdY&t=2024-04-06T21%3A48%3A22.192Z",
   },
   {
     id: 2,
@@ -164,10 +154,8 @@ const features = [
       "My toolkit is powered by React, PostgreSQL, Tailwind CSS, and Supabase, enabling me to deliver full-stack solutions from concept to deployment. Whether it's front-end design or back-end architecture, my projects, like the Internal Franchise Document Management System for Sully's Steamers, showcase my ability to navigate and unite various technologies for comprehensive solutions.",
 
     contentPosition: "l",
-    minH: "48vh",
-    size: "100%",
-    backgroundImage:
-      "https://yhxzzowpqrerphvfdlkj.supabase.co/storage/v1/object/sign/imgs/sashaqphotography-84.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJpbWdzL3Nhc2hhcXBob3RvZ3JhcGh5LTg0LmpwZyIsImlhdCI6MTcxMjQzNjk2NCwiZXhwIjoxNzQzOTcyOTY0fQ.nDInK2dVSj9ZlkNNdIH8wQOu2Sy7CETdG8Uvt23S2EI&t=2024-04-06T20%3A56%3A04.194Z",
+
+    img: "https://yhxzzowpqrerphvfdlkj.supabase.co/storage/v1/object/sign/imgs/sashaqphotography-84.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJpbWdzL3Nhc2hhcXBob3RvZ3JhcGh5LTg0LmpwZyIsImlhdCI6MTcxMjQzNjk2NCwiZXhwIjoxNzQzOTcyOTY0fQ.nDInK2dVSj9ZlkNNdIH8wQOu2Sy7CETdG8Uvt23S2EI&t=2024-04-06T20%3A56%3A04.194Z",
   },
   {
     id: 3,
@@ -176,13 +164,10 @@ const features = [
     description:
       "A standout project in my budding career is the internal document management system developed for Sully's Steamers. My role spanned database design with PostgreSQL and Supabase to front-end development using React.js and Tailwind CSS, significantly enhancing operational efficiency and aiding the franchise's expansion.",
     contentPosition: "r",
-    size: "100%",
-    scale: "1.1",
-    minH: "42vh",
 
-    backgroundImage:
-      "https://yhxzzowpqrerphvfdlkj.supabase.co/storage/v1/object/sign/imgs/ss.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJpbWdzL3NzLnBuZyIsImlhdCI6MTcxMjQ0MTEyMywiZXhwIjoxNzQzOTc3MTIzfQ.lAVdYe517nAjsuKcRKm8S7MywKtJl1NKzPIjIWIPgbA&t=2024-04-06T22%3A05%3A23.621Z",
+    img: "https://yhxzzowpqrerphvfdlkj.supabase.co/storage/v1/object/sign/imgs/ss.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJpbWdzL3NzLnBuZyIsImlhdCI6MTcxMjQ0MTEyMywiZXhwIjoxNzQzOTc3MTIzfQ.lAVdYe517nAjsuKcRKm8S7MywKtJl1NKzPIjIWIPgbA&t=2024-04-06T22%3A05%3A23.621Z",
   },
+
   {
     id: 4,
     callout: "Journey & Aspirations",
@@ -190,9 +175,6 @@ const features = [
     description:
       "From leadership roles in retail to software development, my professional journey is a testament to growth and adaptability. The intensive Full Stack Web Development course at Carolina Code School has been a crucial milestone, sharpening my skills and fueling my ambition to tackle real-world challenges through innovative technology solutions.",
     contentPosition: "l",
-    minH: "48vh",
-    size: "100%",
-    backgroundImage:
-      "https://yhxzzowpqrerphvfdlkj.supabase.co/storage/v1/object/sign/imgs/sashaqphotography-75.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJpbWdzL3Nhc2hhcXBob3RvZ3JhcGh5LTc1LmpwZyIsImlhdCI6MTcxMjQ0MjQ5MiwiZXhwIjoxNzQzOTc4NDkyfQ.J8EkpY7baiNAI4RMOZVHkxjJaafGqQS-QueaA9VlDLw&t=2024-04-06T22%3A28%3A12.124Z",
+    img: "https://yhxzzowpqrerphvfdlkj.supabase.co/storage/v1/object/sign/imgs/sashaqphotography-75.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJpbWdzL3Nhc2hhcXBob3RvZ3JhcGh5LTc1LmpwZyIsImlhdCI6MTcxMjQ0MjQ5MiwiZXhwIjoxNzQzOTc4NDkyfQ.J8EkpY7baiNAI4RMOZVHkxjJaafGqQS-QueaA9VlDLw&t=2024-04-06T22%3A28%3A12.124Z",
   },
 ];
