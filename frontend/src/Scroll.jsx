@@ -1,20 +1,18 @@
 import { motion, useInView } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-import CollapseCardFeatures from "./Socials";
+import { FiDollarSign, FiEye, FiPlay, FiSearch } from "react-icons/fi";
 
 const Example = () => {
   return (
     <>
-      <div className="flex h-48 flex-col items-center justify-center bg-transparent">
+      <div className="flex h-48 flex-col items-center justify-center ">
         <span className="font-semibold uppercase text-white"></span>
-        <span className="mt-12 block rounded-full bg-transparent px-4 py-1 text-center font-medium text-white md:hidden">
-          Note: This is much cooler on desktop 😊
-        </span>
+        <span className="mt-2 block rounded-full bg-indigo-600 px-4 py-1 text-center font-medium text-white md:hidden"></span>
       </div>
       <SwapColumnFeatures />
-      {/* <div className="flex h-48 items-center justify-center bg-transparent">
-        <span className="font-semibold uppercase text-white">Scroll up</span>
-      </div> */}
+      <div className="flex h-48 items-center justify-center ">
+        <span className="font-semibold uppercase text-white"></span>
+      </div>
     </>
   );
 };
@@ -23,7 +21,7 @@ const SwapColumnFeatures = () => {
   const [featureInView, setFeatureInView] = useState(features[0]);
 
   return (
-    <section className="relative mx-auto max-w-screen">
+    <section className="relative mx-auto max-w-7xl">
       <SlidingFeatureDisplay featureInView={featureInView} />
 
       {/* Offsets the height of SlidingFeatureDisplay so that it renders on top of Content to start */}
@@ -80,7 +78,7 @@ const Content = ({ setFeatureInView, featureInView }) => {
   return (
     <section
       ref={ref}
-      className="relative z-10 flex h-fit md:h-screen"
+      className="relative z-0 flex h-fit md:h-screen"
       style={{
         justifyContent:
           featureInView.contentPosition === "l" ? "flex-start" : "flex-end",
@@ -96,9 +94,7 @@ const Content = ({ setFeatureInView, featureInView }) => {
             {featureInView.callout}
           </span>
           <p className="my-3 text-5xl font-bold">{featureInView.title}</p>
-          <p className="bg-gradient-to-br from-white to-gray-400 bg-clip-text text-transparent">
-            {featureInView.description}
-          </p>
+          <p className="text-slate-600">{featureInView.description}</p>
         </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 25 }}
@@ -115,20 +111,17 @@ const Content = ({ setFeatureInView, featureInView }) => {
 
 const ExampleFeature = ({ featureInView }) => {
   return (
-    <div className="relative h-max w-fit rounded-xl z-0 shadow-xl" style={{}}>
-      <div className="flex w-full gap-1.5 rounded-t-xl bg-slate-800 p-3">
+    <div className="relative h-96 w-full rounded-xl bg-slate-800 shadow-xl">
+      <div className="flex w-full gap-1.5 rounded-t-xl bg-slate-900 p-3">
         <div className="h-3 w-3 rounded-full bg-red-500" />
         <div className="h-3 w-3 rounded-full bg-yellow-500" />
         <div className="h-3 w-3 rounded-full bg-green-500" />
       </div>
-      <div className="">
-        <img
-          src={featureInView.img}
-          style={{ maxHeight: featureInView.maxH }}
-          className=""
-        />
+      <div className="p-2">
+        <img src={featureInView.img} alt="" />
       </div>
-      <div className=" z-40">{featureInView.div}</div>
+
+      <span className="absolute left-[50%] top-[50%] -translate-x-[50%] -translate-y-[50%] text-9xl text-slate-700"></span>
     </div>
   );
 };
@@ -143,7 +136,6 @@ const features = [
     description:
       "I'm Ryan McGatha, a recent Carolina Code School graduate, where I sharpened my development skills amidst a hands-on project that marked my transition from the culinary service of steaming bagels at Sully's Steamers to impacting its corporate strategies through software. Specializing in React, PostgreSQL, Tailwind CSS, and Supabase, my journey intertwined with developing a pivotal document management system for Sully's while I was immersed in coding education. This endeavor not only propelled operational efficiencies within Sully's but also underscored my ability to apply learning in real-time to support expansive business objectives. Now, as I step forward into my professional career, I'm enthusiastic about embracing new challenges and crafting innovative solutions.",
     contentPosition: "r",
-    maxH: "80vh",
     img: "https://yhxzzowpqrerphvfdlkj.supabase.co/storage/v1/object/sign/imgs/IMG_0947.JPG?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJpbWdzL0lNR18wOTQ3LkpQRyIsImlhdCI6MTcxMjQ0MDEwMiwiZXhwIjoxNzQzOTc2MTAyfQ.LEmMyS8KVEkoeIw0tapivs-eoMLUQWPj1NdeQzr7PdY&t=2024-04-06T21%3A48%3A22.192Z",
   },
   {
@@ -152,9 +144,7 @@ const features = [
     title: "Engineered to Innovate",
     description:
       "My toolkit is powered by React, PostgreSQL, Tailwind CSS, and Supabase, enabling me to deliver full-stack solutions from concept to deployment. Whether it's front-end design or back-end architecture, my projects, like the Internal Franchise Document Management System for Sully's Steamers, showcase my ability to navigate and unite various technologies for comprehensive solutions.",
-
     contentPosition: "l",
-
     img: "https://yhxzzowpqrerphvfdlkj.supabase.co/storage/v1/object/sign/imgs/sashaqphotography-84.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJpbWdzL3Nhc2hhcXBob3RvZ3JhcGh5LTg0LmpwZyIsImlhdCI6MTcxMjQzNjk2NCwiZXhwIjoxNzQzOTcyOTY0fQ.nDInK2dVSj9ZlkNNdIH8wQOu2Sy7CETdG8Uvt23S2EI&t=2024-04-06T20%3A56%3A04.194Z",
   },
   {
@@ -164,7 +154,6 @@ const features = [
     description:
       "A standout project in my budding career is the internal document management system developed for Sully's Steamers. My role spanned database design with PostgreSQL and Supabase to front-end development using React.js and Tailwind CSS, significantly enhancing operational efficiency and aiding the franchise's expansion.",
     contentPosition: "r",
-
     img: "https://yhxzzowpqrerphvfdlkj.supabase.co/storage/v1/object/sign/imgs/ss.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJpbWdzL3NzLnBuZyIsImlhdCI6MTcxMjQ0MTEyMywiZXhwIjoxNzQzOTc3MTIzfQ.lAVdYe517nAjsuKcRKm8S7MywKtJl1NKzPIjIWIPgbA&t=2024-04-06T22%3A05%3A23.621Z",
   },
 

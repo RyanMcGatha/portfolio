@@ -14,7 +14,7 @@ import "./index.css";
 
 import Example from "./Scroll";
 
-import CardRow from "./CardRow";
+import { DisappearingFeatures } from "./CardRow";
 
 const COLORS_TOP = ["#13FFAA", "#1E67C6", "#CE84CF", "#DD335C"];
 
@@ -49,26 +49,23 @@ export const AuroraHero = () => {
         <h1 className="mb-20 bg-gradient-to-br from-white to-gray-400 bg-clip-text text-center  text-transparent md:text-9xl md:leading-tight sm:text-6xl sm:pt-4 sm:mb-6">
           Ryan McGatha <br /> Software Developer
         </h1>
-        {/* <motion.button
+        <motion.button
           style={{
             border,
             boxShadow,
           }}
-          className="group md:mb-40 relative flex w-fit items-center gap-1.5 rounded-full bg-gray-950/10 px-4 py-2 text-gray-50 transition-colors hover:bg-gray-950/50 md:px-6 md:py-3 md:text-4xl md:gap-2 md:rounded-8xl md:shadow-lg sm:text-xl sm:mt-3"
+          className="group md:mb-10 relative flex w-fit items-center gap-1.5 rounded-full bg-gray-950/10 px-4 py-2 text-gray-50 transition-colors hover:bg-gray-950/50 md:px-6 md:py-3 md:text-4xl md:gap-2 md:rounded-8xl md:shadow-lg sm:text-xl sm:mt-3"
           onClick={() => {
-            window.scrollTo({
-              top: window.scrollTo(1000, 1000),
-              behavior: "smooth",
-            });
+            window.location.href = "https://www.linkedin.com/in/ryanmcgatha/";
           }}
         >
-          Click or Scroll To Start
-        </motion.button> */}
+          Click For Greatness!
+        </motion.button>
       </div>
       <LogoHero />
       <div className="z-10">
         <Example />
-        <CardRow />
+        <DisappearingFeatures />
       </div>
 
       <div className="absolute inset-0 overflow-visible z-0">
