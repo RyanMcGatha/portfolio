@@ -24,7 +24,6 @@ const SwapColumnFeatures = () => {
     <section className="relative mx-auto" style={{ maxWidth: "80vw" }}>
       <SlidingFeatureDisplay featureInView={featureInView} />
 
-      {/* Offsets the height of SlidingFeatureDisplay so that it renders on top of Content to start */}
       <div className="-mt-[75vh] hidden md:block" />
 
       {features.map((s) => (

@@ -16,6 +16,12 @@ import Example from "./Scroll";
 
 import { DisappearingFeatures } from "./CardRow";
 
+import TerminalContact from "./Email";
+
+import StackedCardTestimonials from "./Projects";
+
+import HoverDevCards from "./HoverImageLinks";
+
 const COLORS_TOP = ["#13FFAA", "#1E67C6", "#CE84CF", "#DD335C"];
 
 export const AuroraHero = () => {
@@ -65,7 +71,11 @@ export const AuroraHero = () => {
       <LogoHero />
       <div className="z-10">
         <Example />
-        <DisappearingFeatures />
+        <StackedCardTestimonials />
+        <HoverDevCards />
+        <TerminalContact />
+
+        {/* <DisappearingFeatures /> */}
       </div>
 
       <div className="absolute inset-0 overflow-visible z-0">
