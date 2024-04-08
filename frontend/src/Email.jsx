@@ -16,12 +16,14 @@ const TerminalContact = () => {
       //   }}
       className="px-4 py-12 bg-transparent"
     >
+      <p className="text-6xl font-semibold mb-10">Lets Connect!</p>
+
       <div
         ref={containerRef}
         onClick={() => {
           inputRef.current?.focus();
         }}
-        className="h-96 bg-slate-950/70 backdrop-blur rounded-lg w-full max-w-3xl mx-auto overflow-y-scroll shadow-xl cursor-text font-mono"
+        className="h-96 bg-slate-950/70 backdrop-blur rounded-lg w-full max-w-7xl mx-auto overflow-y-scroll shadow-xl cursor-text font-mono"
       >
         <TerminalHeader />
         <TerminalBody inputRef={inputRef} containerRef={containerRef} />
@@ -37,7 +39,7 @@ const TerminalHeader = () => {
       <div className="w-3 h-3 rounded-full bg-yellow-500" />
       <div className="w-3 h-3 rounded-full bg-green-500" />
       <span className="text-sm text-slate-200 font-semibold absolute left-[50%] -translate-x-[50%]">
-        portfollio - contact_me
+        contact_me
       </span>
     </div>
   );

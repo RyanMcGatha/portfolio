@@ -14,19 +14,16 @@ const StackedCardTestimonials = () => {
   const [selected, setSelected] = useState(0);
 
   return (
-    <div className="flex justify-center min-w-screen max-w-screen">
-      <section
-        className=" py-24 px-10 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-4 overflow-hidden h-full"
-        style={{ maxWidth: "90vw" }}
-      >
+    <div className="flex max-w-screen overflow-hidden max-h-fit justify-center">
+      <section className=" px-4 grid grid-cols-1 gap-8 overflow-hidden max-w-7xl">
         <div className="">
-          <span className="rounded-full bg-indigo-600 px-4 py-2 text-4xl font-medium text-white">
+          <span className="rounded-full bg-indigo-600 px-2 px py-1.5 text-xs font-medium text-white">
             Projects
           </span>
-          <h3 className="text-5xl font-semibold mt-5">
+          <h3 className="my-3 text-5xl font-bold">
             Crafting Innovative Solutions
           </h3>
-          <p className=" my-4">
+          <p className="" style={{ maxWidth: "" }}>
             Each project below represents a unique challenge I've tackled,
             showcasing my skills in full-stack development. From enhancing
             operational efficiency with custom-built document management systems
@@ -57,11 +54,11 @@ const SelectBtns = ({ numTracks, setSelected, selected }) => {
           <button
             key={n}
             onClick={() => setSelected(n)}
-            className="h-1.5 w-full bg-slate-300 relative"
+            className="h-1.5 w-full bg-slate-900 relative"
           >
             {selected === n ? (
               <motion.span
-                className="absolute top-0 left-0 bottom-0 bg-slate-950"
+                className="absolute top-0 left-0 bottom-0 bg-violet-600"
                 initial={{
                   width: "0%",
                 }}
@@ -92,7 +89,7 @@ const SelectBtns = ({ numTracks, setSelected, selected }) => {
 
 const Cards = ({ testimonials, selected, setSelected }) => {
   return (
-    <div className="p-4 relative h-[450px] lg:h-[500px]">
+    <div className="p-4 relative h-[100vh] lg:h-[100vh]">
       {testimonials.map((t, i) => {
         return (
           <Card
@@ -145,23 +142,17 @@ const Card = ({
         ease: "easeOut",
       }}
       onClick={() => setSelected(position)}
-      className="absolute top-0 left-0 w-full min-h-full p-8 lg:p-12 cursor-pointer flex flex-col justify-between"
+      className="absolute top-0 left-0 cursor-pointer flex flex-col px-5"
     >
-      <img
-        src={img}
-        alt="Project screenshot"
-        className="max-w-full h-auto object-cover"
-      />
-      <div className=" bg-slate-900 rounded-md">
-        <span className="flex justify-center font-semibold text-2xl">
-          {name}
-        </span>
+      <img src={img} alt="Project screenshot" className=" max-w-full gap-8" />
+      <div className=" w-full px-5 pt-3 flex flex-col bg-slate-900 rounded-md text-center text-nowrap items-center">
+        <span className=" text-xl justify-center px-5 ">{name}</span>
 
         <span
           onClick={() => {
             window.location.href = code;
           }}
-          className="flex justify-center text-2xl underline hover:text-violet-600"
+          className="flex justify-center min-h-fit text-xl underline hover:text-violet-600 mb-2"
         >
           View Code
         </span>

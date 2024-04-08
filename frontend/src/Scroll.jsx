@@ -5,14 +5,9 @@ import { FiDollarSign, FiEye, FiPlay, FiSearch } from "react-icons/fi";
 const Example = () => {
   return (
     <>
-      <div className="flex h-0 flex-col items-center justify-center ">
-        <span className="font-semibold uppercase text-white"></span>
-        <span className="mt-2 block rounded-full px-4 py-1 text-center font-medium text-white md:hidden"></span>
-      </div>
+      <div className="flex h-20 flex-col items-center justify-center bg-transparent"></div>
       <SwapColumnFeatures />
-      <div className="flex h-5 items-center justify-center ">
-        <span className="font-semibold uppercase text-white"></span>
-      </div>
+      <div className="flex h-20 items-center justify-center"></div>
     </>
   );
 };
@@ -21,10 +16,11 @@ const SwapColumnFeatures = () => {
   const [featureInView, setFeatureInView] = useState(features[0]);
 
   return (
-    <section className="relative mx-auto" style={{ maxWidth: "80vw" }}>
+    <section className="relative mx-auto max-w-7xl">
       <SlidingFeatureDisplay featureInView={featureInView} />
 
-      <div className="-mt-[75vh] hidden md:block" />
+      {/* Offsets the height of SlidingFeatureDisplay so that it renders on top of Content to start */}
+      <div className="-mt-[100vh] hidden md:block" />
 
       {features.map((s) => (
         <Content
@@ -77,13 +73,13 @@ const Content = ({ setFeatureInView, featureInView }) => {
   return (
     <section
       ref={ref}
-      className="relative z-0 flex h-screen overflow-hidden"
+      className="relative z-0 flex h-fit md:h-screen"
       style={{
         justifyContent:
           featureInView.contentPosition === "l" ? "flex-start" : "flex-end",
       }}
     >
-      <div className="grid h-fit w-full place-content-center px-4 py-12 md:w-2/5 md:px-8 md:py-8">
+      <div className="grid h-full w-full place-content-center px-4 py-12 md:w-2/5 md:px-8 md:py-8">
         <motion.div
           initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -93,7 +89,7 @@ const Content = ({ setFeatureInView, featureInView }) => {
             {featureInView.callout}
           </span>
           <p className="my-3 text-5xl font-bold">{featureInView.title}</p>
-          <p className="">{featureInView.description}</p>
+          <p className="text-slate-white">{featureInView.description}</p>
         </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 25 }}
@@ -110,18 +106,20 @@ const Content = ({ setFeatureInView, featureInView }) => {
 
 const ExampleFeature = ({ featureInView }) => {
   return (
-    <div className="relative max-h-96 w-full rounded-xl shadow-xl">
+    <div className="relative h-96 w-full rounded-xl bg-slate-800 shadow-xl">
       <div className="flex w-full gap-1.5 rounded-t-xl bg-slate-900 p-3">
         <div className="h-3 w-3 rounded-full bg-red-500" />
         <div className="h-3 w-3 rounded-full bg-yellow-500" />
         <div className="h-3 w-3 rounded-full bg-green-500" />
       </div>
+      <div className="p-2">
+        <img src={featureInView.img} />
+        <p className="font-mono text-sm ">
+          <span className="text-green-300">~</span>
+        </p>
+      </div>
 
-      <img
-        src={featureInView.img}
-        alt=""
-        style={{ height: featureInView.height, width: featureInView.width }}
-      />
+      <span className="absolute left-[50%] top-[50%] -translate-x-[50%] -translate-y-[50%] text-9xl text-slate-700"></span>
     </div>
   );
 };
@@ -134,7 +132,7 @@ const features = [
     callout: "About Me",
     title: "It's simple",
     description:
-      "I'm Ryan McGatha, a recent Carolina Code School graduate, where I sharpened my development skills amidst a hands-on project that marked my transition from the culinary service of steaming bagels at Sully's Steamers to impacting its corporate strategies through software. Specializing in React, PostgreSQL, Tailwind CSS, and Supabase, my journey intertwined with developing a pivotal document management system for Sully's while I was immersed in coding education. This endeavor not only propelled operational efficiencies within Sully's but also underscored my ability to apply learning in real-time to support expansive business objectives. Now, as I step forward into my professional career, I'm enthusiastic about embracing new challenges and crafting innovative solutions.",
+      "I'm Ryan McGatha, transitioning from the culinary service of steaming bagels at Sully's Steamers to impacting its corporate strategies through software. Specializing in React, PostgreSQL, Tailwind CSS, and Supabase, my journey involved developing a pivotal document management system for Sully's. This endeavor not only propelled operational efficiencies within Sully's but also underscored my ability to apply learning in real-time to support expansive business objectives. Now, as I step forward into my professional career, I'm enthusiastic about embracing new challenges and crafting innovative solutions.",
     contentPosition: "r",
     img: "https://yhxzzowpqrerphvfdlkj.supabase.co/storage/v1/object/sign/imgs/sashaqphotography-116.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJpbWdzL3Nhc2hhcXBob3RvZ3JhcGh5LTExNi5qcGciLCJpYXQiOjE3MTI1Mjc1NDIsImV4cCI6MTc0NDA2MzU0Mn0.pzbirmzZk0_wDDrryKGR_4fcrSYX3vZEhAqqdnG4Wu4&t=2024-04-07T22%3A05%3A42.594Z",
   },
