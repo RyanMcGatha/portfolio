@@ -5,12 +5,12 @@ import { FiDollarSign, FiEye, FiPlay, FiSearch } from "react-icons/fi";
 const Example = () => {
   return (
     <>
-      <div className="flex h-20 flex-col items-center justify-center ">
+      <div className="flex h-0 flex-col items-center justify-center ">
         <span className="font-semibold uppercase text-white"></span>
         <span className="mt-2 block rounded-full px-4 py-1 text-center font-medium text-white md:hidden"></span>
       </div>
       <SwapColumnFeatures />
-      <div className="flex h-20 items-center justify-center ">
+      <div className="flex h-5 items-center justify-center ">
         <span className="font-semibold uppercase text-white"></span>
       </div>
     </>
@@ -21,11 +21,11 @@ const SwapColumnFeatures = () => {
   const [featureInView, setFeatureInView] = useState(features[0]);
 
   return (
-    <section className="relative mx-auto max-w-7xl">
+    <section className="relative mx-auto" style={{ maxWidth: "80vw" }}>
       <SlidingFeatureDisplay featureInView={featureInView} />
 
       {/* Offsets the height of SlidingFeatureDisplay so that it renders on top of Content to start */}
-      <div className="-mt-[70vh] hidden md:block" />
+      <div className="-mt-[75vh] hidden md:block" />
 
       {features.map((s) => (
         <Content
@@ -94,7 +94,7 @@ const Content = ({ setFeatureInView, featureInView }) => {
             {featureInView.callout}
           </span>
           <p className="my-3 text-5xl font-bold">{featureInView.title}</p>
-          <p className="text-slate-600">{featureInView.description}</p>
+          <p className="">{featureInView.description}</p>
         </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 25 }}

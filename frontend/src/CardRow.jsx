@@ -9,14 +9,17 @@ export const DisappearingFeatures = () => {
         <Features />
       </div>
 
-      <div className="h-[50vh]" />
+      <div className="h-[10vh]" />
     </>
   );
 };
 
 const Features = () => {
   return (
-    <div className="relative mx-auto grid h-full w-full max-w-7xl grid-cols-1 gap-8 px-4 md:grid-cols-2">
+    <div
+      className="relative mx-auto grid h-full w-full grid-cols-1 gap-8 px-4 md:grid-cols-2"
+      style={{ maxWidth: "80vw" }}
+    >
       <Copy />
       <Carousel />
     </div>
@@ -102,7 +105,7 @@ const CarouselItem = ({ img, url, scrollYProgress, position, numItems }) => {
         style={{ opacity, scale }}
         className="grid aspect-video w-full shrink-0 place-content-center rounded-2xl bg-neutral-900 p-4"
       >
-        <div className="">
+        <div className="flex w-full justify-center my-1 mb-3">
           <DragCloseDrawerExample />
         </div>
         <img
