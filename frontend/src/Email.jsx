@@ -7,28 +7,34 @@ const TerminalContact = () => {
   const inputRef = useRef(null);
 
   return (
-    <section
-      //   style={{
-      //     backgroundImage:
-      //       "url(https://images.unsplash.com/photo-1482686115713-0fbcaced6e28?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1734&q=80)",
-      //     backgroundSize: "cover",
-      //     backgroundPosition: "center",
-      //   }}
-      className="px-4 py-12 bg-transparent"
+    <div
+      style={{
+        maxWidth: "100vw",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+      }}
     >
-      <p className="text-6xl font-semibold mb-10">Lets Connect!</p>
-
-      <div
-        ref={containerRef}
-        onClick={() => {
-          inputRef.current?.focus();
-        }}
-        className=" bg-slate-950/70 backdrop-blur rounded-lg mx-auto overflow-y-auto shadow-xl cursor-text font-mono max-w-6xl min-h-80 md:min-h-screen px-2"
-      >
-        <TerminalHeader />
-        <TerminalBody inputRef={inputRef} containerRef={containerRef} />
-      </div>
-    </section>
+      <section className=" bg-transparent flex-col flex overflow-hidden max-w-7xl px-3 md:px-10 mb-5">
+        <span className="rounded-full bg-indigo-600 px-2 py-1.5 text-xl font-medium text-white w-fit">
+          Contact Me
+        </span>
+        <h3 className="my-3 text-5xl md:text-7xl font-bold">
+          Say Hello, Im Nice!
+        </h3>
+        <p className="mb-10"></p>
+        <div
+          ref={containerRef}
+          onClick={() => {
+            inputRef.current?.focus();
+          }}
+          className=" bg-slate-950/70 backdrop-blur rounded-lg mx-auto overflow-y-auto shadow-xl cursor-text font-mono max-w-6xl min-h-80 md:min-h-screen px-2"
+        >
+          <TerminalHeader />
+          <TerminalBody inputRef={inputRef} containerRef={containerRef} />
+        </div>
+      </section>
+    </div>
   );
 };
 
@@ -71,7 +77,7 @@ const TerminalBody = ({ containerRef, inputRef }) => {
   };
 
   return (
-    <div className="p-3 text-slate-100 text-lg md:text-3xl">
+    <div className="p-3 text-slate-100 text-lg md:text-xl">
       <InitialText />
       <PreviousQuestions questions={questions} />
       <CurrentQuestion curQuestion={curQuestion} />
@@ -97,8 +103,8 @@ const InitialText = () => {
   return (
     <>
       <p>Hey there! I'm excited to link 🔗</p>
-      <p className="whitespace-nowrap overflow-hidden font-light">
-        ------------------------------------------------------------------------
+      <p className=" overflow-hidden font-light">
+        -------------------------------------------------------------------------
       </p>
     </>
   );

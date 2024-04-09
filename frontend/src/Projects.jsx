@@ -14,7 +14,7 @@ const StackedCardTestimonials = () => {
   const [selected, setSelected] = useState(0);
 
   return (
-    <div className="flex max-w-screen overflow-hidden justify-center">
+    <div className="flex max-w-screen overflow-hidden justify-center ">
       <section className=" px-4 grid grid-cols-1 gap-8 overflow-hidden max-w-7xl">
         <div className="">
           <span className="rounded-full bg-indigo-600 px-2 px py-1.5 text-xs font-medium text-white">
@@ -23,7 +23,7 @@ const StackedCardTestimonials = () => {
           <h3 className="my-3 text-5xl font-bold">
             Crafting Innovative Solutions
           </h3>
-          <p className="" style={{ maxWidth: "" }}>
+          <p className="">
             Each project below represents a unique challenge I've tackled,
             showcasing my skills in full-stack development. From enhancing
             operational efficiency with custom-built document management systems
@@ -89,7 +89,7 @@ const SelectBtns = ({ numTracks, setSelected, selected }) => {
 
 const Cards = ({ testimonials, selected, setSelected }) => {
   return (
-    <div className=" relative h-[60vh] md:h-[100vh]">
+    <div className=" relative h-[70vh] md:h-[100vh]">
       {testimonials.map((t, i) => {
         return (
           <Card
