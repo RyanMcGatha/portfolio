@@ -14,7 +14,7 @@ const StackedCardTestimonials = () => {
   const [selected, setSelected] = useState(0);
 
   return (
-    <div className="flex max-w-screen overflow-hidden max-h-fit justify-center">
+    <div className="flex max-w-screen overflow-hidden justify-center">
       <section className=" px-4 grid grid-cols-1 gap-8 overflow-hidden max-w-7xl">
         <div className="">
           <span className="rounded-full bg-indigo-600 px-2 px py-1.5 text-xs font-medium text-white">
@@ -89,7 +89,7 @@ const SelectBtns = ({ numTracks, setSelected, selected }) => {
 
 const Cards = ({ testimonials, selected, setSelected }) => {
   return (
-    <div className="p-4 relative h-[100vh] lg:h-[100vh]">
+    <div className=" relative h-[60vh] md:h-[100vh]">
       {testimonials.map((t, i) => {
         return (
           <Card
@@ -142,20 +142,31 @@ const Card = ({
         ease: "easeOut",
       }}
       onClick={() => setSelected(position)}
-      className="absolute top-0 left-0 cursor-pointer flex flex-col px-5"
+      className="absolute top-0 left-0 cursor-pointer flex flex-col"
     >
-      <img src={img} alt="Project screenshot" className=" max-w-full gap-8" />
-      <div className=" w-full px-5 pt-3 flex flex-col bg-slate-900 rounded-md text-center text-nowrap items-center">
-        <span className=" text-xl justify-center px-5 ">{name}</span>
+      <div className="relative h-fit w-full rounded-xl  md:px-10">
+        <div className="flex w-full gap-1.5 rounded-t-xl bg-slate-900 p-3">
+          <div className="h-3 w-3 rounded-full bg-red-500" />
+          <div className="h-3 w-3 rounded-full bg-yellow-500" />
+          <div className="h-3 w-3 rounded-full bg-green-500" />
+        </div>
+        <img src={img} alt="Project screenshot" className="" />
+        <div className="w-full pt-3 flex flex-col bg-slate-900 rounded-md text-center text-nowrap items-center min-w-max">
+          <span className=" min-h-fit md:text-xl justify-center md:px-5">
+            {name}
+          </span>
 
-        <span
-          onClick={() => {
-            window.location.href = code;
-          }}
-          className="flex justify-center min-h-fit text-xl underline hover:text-violet-600 mb-2"
-        >
-          View Code
-        </span>
+          <span
+            onClick={() => {
+              window.location.href = code;
+            }}
+            className="flex justify-center min-h-fit text-xl underline hover:text-violet-600 mb-2"
+          >
+            View Code
+          </span>
+        </div>
+
+        <span className="absolute left-[50%] top-[50%] -translate-x-[50%] -translate-y-[50%] text-9xl text-slate-700"></span>
       </div>
     </motion.div>
   );

@@ -23,7 +23,7 @@ const TerminalContact = () => {
         onClick={() => {
           inputRef.current?.focus();
         }}
-        className="h-96 bg-slate-950/70 backdrop-blur rounded-lg w-full max-w-7xl mx-auto overflow-y-scroll shadow-xl cursor-text font-mono"
+        className=" bg-slate-950/70 backdrop-blur rounded-lg mx-auto overflow-y-auto shadow-xl cursor-text font-mono max-w-6xl min-h-80 md:min-h-screen px-2"
       >
         <TerminalHeader />
         <TerminalBody inputRef={inputRef} containerRef={containerRef} />
@@ -34,7 +34,7 @@ const TerminalContact = () => {
 
 const TerminalHeader = () => {
   return (
-    <div className="w-full p-3 bg-slate-900 flex items-center gap-1 sticky top-0">
+    <div className="w-full p-4 bg-slate-900 flex items-center gap-1 sticky top-0">
       <div className="w-3 h-3 rounded-full bg-red-500" />
       <div className="w-3 h-3 rounded-full bg-yellow-500" />
       <div className="w-3 h-3 rounded-full bg-green-500" />
@@ -71,7 +71,7 @@ const TerminalBody = ({ containerRef, inputRef }) => {
   };
 
   return (
-    <div className="p-2 text-slate-100 text-lg">
+    <div className="p-3 text-slate-100 text-lg md:text-3xl">
       <InitialText />
       <PreviousQuestions questions={questions} />
       <CurrentQuestion curQuestion={curQuestion} />

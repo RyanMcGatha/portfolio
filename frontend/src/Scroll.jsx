@@ -106,18 +106,14 @@ const Content = ({ setFeatureInView, featureInView }) => {
 
 const ExampleFeature = ({ featureInView }) => {
   return (
-    <div className="relative h-96 w-full rounded-xl bg-slate-800 shadow-xl">
+    <div className="relative h-fit w-full rounded-xl bg-slate-800 shadow-xl">
       <div className="flex w-full gap-1.5 rounded-t-xl bg-slate-900 p-3">
         <div className="h-3 w-3 rounded-full bg-red-500" />
         <div className="h-3 w-3 rounded-full bg-yellow-500" />
         <div className="h-3 w-3 rounded-full bg-green-500" />
       </div>
-      <div className="p-2">
-        <img src={featureInView.img} />
-        <p className="font-mono text-sm ">
-          <span className="text-green-300">~</span>
-        </p>
-      </div>
+
+      <img src={featureInView.img} className=" rounded-sm" />
 
       <span className="absolute left-[50%] top-[50%] -translate-x-[50%] -translate-y-[50%] text-9xl text-slate-700"></span>
     </div>
