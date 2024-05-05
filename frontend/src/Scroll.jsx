@@ -130,7 +130,7 @@ const features = [
     description:
       "I'm Ryan McGatha, transitioning from the culinary service of steaming bagels at Sully's Steamers to impacting its corporate strategies through software. Specializing in React, PostgreSQL, Tailwind CSS, and Supabase, my journey involved developing a pivotal document management system for Sully's. This endeavor not only propelled operational efficiencies within Sully's but also underscored my ability to apply learning in real-time to support expansive business objectives. Now, as I step forward into my professional career, I'm enthusiastic about embracing new challenges and crafting innovative solutions.",
     contentPosition: "r",
-    img: "https://yhxzzowpqrerphvfdlkj.supabase.co/storage/v1/object/sign/imgs/sashaqphotography-116.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJpbWdzL3Nhc2hhcXBob3RvZ3JhcGh5LTExNi5qcGciLCJpYXQiOjE3MTI1Mjc1NDIsImV4cCI6MTc0NDA2MzU0Mn0.pzbirmzZk0_wDDrryKGR_4fcrSYX3vZEhAqqdnG4Wu4&t=2024-04-07T22%3A05%3A42.594Z",
+    img: "./one.jpg",
   },
   {
     id: 2,
@@ -139,7 +139,7 @@ const features = [
     description:
       "My toolkit is powered by React, PostgreSQL, Tailwind CSS, and Supabase, enabling me to deliver full-stack solutions from concept to deployment. Whether it's front-end design or back-end architecture, my projects, like the Internal Franchise Document Management System for Sully's Steamers, showcase my ability to navigate and unite various technologies for comprehensive solutions.",
     contentPosition: "l",
-    img: "https://yhxzzowpqrerphvfdlkj.supabase.co/storage/v1/object/sign/imgs/sashaqphotography-84.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJpbWdzL3Nhc2hhcXBob3RvZ3JhcGh5LTg0LmpwZyIsImlhdCI6MTcxMjQzNjk2NCwiZXhwIjoxNzQzOTcyOTY0fQ.nDInK2dVSj9ZlkNNdIH8wQOu2Sy7CETdG8Uvt23S2EI&t=2024-04-06T20%3A56%3A04.194Z",
+    img: "./two.jpg",
   },
   {
     id: 3,
@@ -148,7 +148,7 @@ const features = [
     description:
       "A standout project in my budding career is the internal document management system developed for Sully's Steamers. My role spanned database design with PostgreSQL and Supabase to front-end development using React.js and Tailwind CSS, significantly enhancing operational efficiency and aiding the franchise's expansion.",
     contentPosition: "r",
-    img: "https://yhxzzowpqrerphvfdlkj.supabase.co/storage/v1/object/sign/imgs/ss.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJpbWdzL3NzLnBuZyIsImlhdCI6MTcxMjQ0MTEyMywiZXhwIjoxNzQzOTc3MTIzfQ.lAVdYe517nAjsuKcRKm8S7MywKtJl1NKzPIjIWIPgbA&t=2024-04-06T22%3A05%3A23.621Z",
+    img: "./three.png",
   },
 
   {
@@ -158,6 +158,6 @@ const features = [
     description:
       "From leadership roles in retail to software development, my professional journey is a testament to growth and adaptability. The intensive Full Stack Web Development course at Carolina Code School has been a crucial milestone, sharpening my skills and fueling my ambition to tackle real-world challenges through innovative technology solutions.",
     contentPosition: "l",
-    img: "https://yhxzzowpqrerphvfdlkj.supabase.co/storage/v1/object/sign/imgs/sashaqphotography-75.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJpbWdzL3Nhc2hhcXBob3RvZ3JhcGh5LTc1LmpwZyIsImlhdCI6MTcxMjQ0MjQ5MiwiZXhwIjoxNzQzOTc4NDkyfQ.J8EkpY7baiNAI4RMOZVHkxjJaafGqQS-QueaA9VlDLw&t=2024-04-06T22%3A28%3A12.124Z",
+    img: "./four.jpg",
   },
 ];

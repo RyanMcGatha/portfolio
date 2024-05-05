@@ -53,10 +53,10 @@ const Carousel = () => {
   });
 
   const imageUrls = [
-    "https://yhxzzowpqrerphvfdlkj.supabase.co/storage/v1/object/sign/imgs/port-ss.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJpbWdzL3BvcnQtc3MucG5nIiwiaWF0IjoxNzEyNDU5NTQ5LCJleHAiOjE3NDM5OTU1NDl9.OwMqYWRglVYAekG_qtIm-9bS-n_6MLkOR_SdyqKDlM8&t=2024-04-07T03%3A12%3A29.130Z",
-    "https://yhxzzowpqrerphvfdlkj.supabase.co/storage/v1/object/sign/imgs/ss.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJpbWdzL3NzLnBuZyIsImlhdCI6MTcxMjQ1OTYwMSwiZXhwIjoxNzQzOTk1NjAxfQ.VeB3ETrP_ShN_TvMEfWpnyxDR6wFDtWhkGCcGmAS7SU&t=2024-04-07T03%3A13%3A21.989Z",
-    "https://yhxzzowpqrerphvfdlkj.supabase.co/storage/v1/object/sign/imgs/port-ss.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJpbWdzL3BvcnQtc3MucG5nIiwiaWF0IjoxNzEyNDU5NTQ5LCJleHAiOjE3NDM5OTU1NDl9.OwMqYWRglVYAekG_qtIm-9bS-n_6MLkOR_SdyqKDlM8&t=2024-04-07T03%3A12%3A29.130Z",
-    "https://yhxzzowpqrerphvfdlkj.supabase.co/storage/v1/object/sign/imgs/ss.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJpbWdzL3NzLnBuZyIsImlhdCI6MTcxMjQ1OTYwMSwiZXhwIjoxNzQzOTk1NjAxfQ.VeB3ETrP_ShN_TvMEfWpnyxDR6wFDtWhkGCcGmAS7SU&t=2024-04-07T03%3A13%3A21.989Z",
+    "./three.png",
+    "./three.png",
+    "./three.png",
+    "./three.png",
   ];
 
   const projectUrls = [
@@ -76,7 +76,7 @@ const Carousel = () => {
             scrollYProgress={scrollYProgress}
             position={index + 1}
             numItems={imageUrls.length}
-            img={img}
+            img="./three.png"
             // url={projectUrls[index]}
           />
         ))}
@@ -109,7 +109,7 @@ const CarouselItem = ({ img, url, scrollYProgress, position, numItems }) => {
           <DragCloseDrawerExample />
         </div>
         <img
-          src={img}
+          src="./three.png"
           alt="Project screenshot"
           className="max-w-full h-auto rounded-2xl object-cover"
         />

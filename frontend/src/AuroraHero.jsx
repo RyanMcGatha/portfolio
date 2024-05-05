@@ -71,8 +71,8 @@ export const AuroraHero = () => {
       <LogoHero />
       <div className="z-10">
         <Example />
-        <StackedCardTestimonials />
-        <TerminalContact />
+        {/* <StackedCardTestimonials /> */}
+        {/* <TerminalContact /> */}
         <HoverDevCards />
 
         {/* <DisappearingFeatures /> */}
