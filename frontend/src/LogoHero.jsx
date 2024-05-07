@@ -1,35 +1,37 @@
 import { motion } from "framer-motion";
+import { BiLinkExternal } from "react-icons/bi";
+import { BsGithub } from "react-icons/bs";
+import { LiaLinkedin } from "react-icons/lia";
+import { MdEmail } from "react-icons/md";
 import {
+  SiNike,
+  Si3M,
+  SiAbstract,
+  SiAdobe,
   SiAirtable,
+  SiAmazon,
   SiBox,
   SiBytedance,
+  SiChase,
   SiCloudbees,
   SiBurton,
   SiBmw,
+  SiHeroku,
+  SiBuildkite,
+  SiCouchbase,
+  SiDailymotion,
   SiDeliveroo,
   SiEpicgames,
   SiGenius,
   SiGodaddy,
-  SiLinkedin,
-  SiReact,
-  SiNodedotjs,
-  SiPython,
-  SiSupabase,
-  SiJavascript,
-  SiPostgresql,
-  SiHtml5,
-  SiCss3,
-  SiTailwindcss,
-  SiJenkinsx,
   SiGithub,
-  SiFramer,
-  SiFastapi,
+  SiLinkedin,
 } from "react-icons/si";
 
 const LogoHero = () => {
   return (
-    <section className="bg-transparent max-h-full mt-10 ">
-      <div className="flex  overflow-hidden">
+    <section className="">
+      <div className="flex translate-y-[50%] rotate-[7deg] scale-110 overflow-hidden border-y-4 border-neutral-900  bg-gradient-to-br from-white to-gray-400">
         <TranslateWrapper>
           <LogoItemsTop />
         </TranslateWrapper>
@@ -40,7 +42,7 @@ const LogoHero = () => {
           <LogoItemsTop />
         </TranslateWrapper>
       </div>
-      <div className="flex overflow-hidden ">
+      <div className="flex -translate-y-[50%] -rotate-[7deg] scale-110 overflow-hidden border-y-4 border-neutral-900  bg-gradient-to-br from-white to-gray-400">
         <TranslateWrapper reverse>
           <LogoItemsBottom />
         </TranslateWrapper>
@@ -61,74 +63,126 @@ const TranslateWrapper = ({ children, reverse }) => {
       initial={{ translateX: reverse ? "-100%" : "0%" }}
       animate={{ translateX: reverse ? "0%" : "-100%" }}
       transition={{ duration: 50, repeat: Infinity, ease: "linear" }}
-      className="flex gap-4 px-2"
+      className="flex px-2"
     >
       {children}
     </motion.div>
   );
 };
 
-const LogoItem = ({ Icon }) => {
+const LogoItem = ({ Icon, name, link }) => {
   return (
     <a
-      href="/"
+      href={link}
       rel="nofollow"
       target="_blank"
-      className="w-16 md:w-24 h-16 md:h-24 flex justify-center items-center hover:bg-slate-200 bg-gradient-to-br from-white to-gray-400 bg-clip-text transition-colors"
+      className="flex items-center justify-center gap-4 px-4 py-4 text-black transition-colors hover:bg-neutral-200 md:py-6"
     >
-      <Icon className="text-4xl md:text-5xl" />
+      <Icon className="text-3xl md:text-4xl" />
+      <span className="whitespace-nowrap text-2xl font-semibold uppercase md:text-3xl">
+        {name}
+      </span>
     </a>
   );
 };
 
 const LogoItemsTop = () => (
   <>
-    <LogoItem Icon={SiReact} />
-    <LogoItem Icon={SiPython} />
-    <LogoItem Icon={SiJavascript} />
-    <LogoItem Icon={SiPostgresql} />
-    <LogoItem Icon={SiHtml5} />
-    <LogoItem Icon={SiCss3} />
-    <LogoItem Icon={SiTailwindcss} />
-    <LogoItem Icon={SiGithub} />
-    <LogoItem Icon={SiFramer} />
-    <LogoItem Icon={SiFastapi} />
-    <LogoItem Icon={SiReact} />
-    <LogoItem Icon={SiPython} />
-    <LogoItem Icon={SiJavascript} />
-    <LogoItem Icon={SiPostgresql} />
-    <LogoItem Icon={SiHtml5} />
-    <LogoItem Icon={SiCss3} />
-    <LogoItem Icon={SiTailwindcss} />
-    <LogoItem Icon={SiGithub} />
-    <LogoItem Icon={SiFramer} />
-    <LogoItem Icon={SiFastapi} />
-    <LogoItem Icon={SiSupabase} />
+    <LogoItem
+      Icon={SiLinkedin}
+      name="LinkedIn"
+      link={"https://www.linkedin.com/in/ryanmcgatha/"}
+    />
+    <LogoItem
+      Icon={SiGithub}
+      name="Git Hub"
+      link={"https://github.com/RyanMcGatha"}
+    />
+    <LogoItem
+      Icon={MdEmail}
+      name="Email"
+      link={"mailto:ryanmcgatha@gmail.com"}
+    />
+    <LogoItem
+      Icon={SiLinkedin}
+      name="LinkedIn"
+      link={"https://www.linkedin.com/in/ryanmcgatha/"}
+    />
+    <LogoItem
+      Icon={SiGithub}
+      name="Git Hub"
+      link={"https://github.com/RyanMcGatha"}
+    />
+    <LogoItem
+      Icon={MdEmail}
+      name="Email"
+      link={"mailto:ryanmcgatha@gmail.com"}
+    />
+    <LogoItem
+      Icon={SiLinkedin}
+      name="LinkedIn"
+      link={"https://www.linkedin.com/in/ryanmcgatha/"}
+    />
+    <LogoItem
+      Icon={SiGithub}
+      name="Git Hub"
+      link={"https://github.com/RyanMcGatha"}
+    />
+    <LogoItem
+      Icon={MdEmail}
+      name="Email"
+      link={"mailto:ryanmcgatha@gmail.com"}
+    />
   </>
 );
 
 const LogoItemsBottom = () => (
   <>
-    <LogoItem Icon={SiReact} />
-    <LogoItem Icon={SiPython} />
-    <LogoItem Icon={SiJavascript} />
-    <LogoItem Icon={SiPostgresql} />
-    <LogoItem Icon={SiHtml5} />
-    <LogoItem Icon={SiCss3} />
-    <LogoItem Icon={SiTailwindcss} />
-    <LogoItem Icon={SiGithub} />
-    <LogoItem Icon={SiFramer} />
-    <LogoItem Icon={SiFastapi} />
-    <LogoItem Icon={SiReact} />
-    <LogoItem Icon={SiPython} />
-    <LogoItem Icon={SiJavascript} />
-    <LogoItem Icon={SiPostgresql} />
-    <LogoItem Icon={SiHtml5} />
-    <LogoItem Icon={SiCss3} />
-    <LogoItem Icon={SiTailwindcss} />
-    <LogoItem Icon={SiGithub} />
-    <LogoItem Icon={SiFramer} />
-    <LogoItem Icon={SiFastapi} />
+    <LogoItem
+      Icon={SiLinkedin}
+      name="LinkedIn"
+      link={"https://www.linkedin.com/in/ryanmcgatha/"}
+    />
+    <LogoItem
+      Icon={SiGithub}
+      name="Git Hub"
+      link={"https://github.com/RyanMcGatha"}
+    />
+    <LogoItem
+      Icon={MdEmail}
+      name="Email"
+      link={"mailto:ryanmcgatha@gmail.com"}
+    />
+    <LogoItem
+      Icon={SiLinkedin}
+      name="LinkedIn"
+      link={"https://www.linkedin.com/in/ryanmcgatha/"}
+    />
+    <LogoItem
+      Icon={SiGithub}
+      name="Git Hub"
+      link={"https://github.com/RyanMcGatha"}
+    />
+    <LogoItem
+      Icon={MdEmail}
+      name="Email"
+      link={"mailto:ryanmcgatha@gmail.com"}
+    />
+    <LogoItem
+      Icon={SiLinkedin}
+      name="LinkedIn"
+      link={"https://www.linkedin.com/in/ryanmcgatha/"}
+    />
+    <LogoItem
+      Icon={SiGithub}
+      name="Git Hub"
+      link={"https://github.com/RyanMcGatha"}
+    />
+    <LogoItem
+      Icon={MdEmail}
+      name="Email"
+      link={"mailto:ryanmcgatha@gmail.com"}
+    />
   </>
 );
 

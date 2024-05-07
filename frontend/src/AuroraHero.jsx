@@ -18,9 +18,9 @@ import { DisappearingFeatures } from "./CardRow";
 
 import TerminalContact from "./Email";
 
-import StackedCardTestimonials from "./Projects";
-
 import HoverDevCards from "./HoverImageLinks";
+
+import Projects from "./Projects";
 
 const COLORS_TOP = ["#13FFAA", "#1E67C6", "#CE84CF", "#DD335C"];
 
@@ -46,32 +46,20 @@ export const AuroraHero = () => {
         backgroundImage,
         backgroundAttachment: "fixed",
       }}
-      className="relative sm:pt-5 flex flex-col align-center bg-gray-950  text-gray-200  "
+      className="relative flex flex-col align-center bg-gray-950  text-gray-200 p-2 pt-24"
     >
-      <div className="relative z-10 flex flex-col items-center sm:mb-0 pt-10">
-        <span className="mb-1.5 mt-16 inline-block rounded-full bg-gray-600/50 px-3 py-2 text-sm sm:mt-8 md:text-2xl">
+      <div className="relative z-10 flex flex-col items-center">
+        <span className="mb-1.5 inline-block rounded-full bg-gray-600/50 px-3 py-2 text-lg md:text-xl">
           Actively Seeking Employment!
         </span>
-        <h1 className="mb-20 bg-gradient-to-br from-white to-gray-400 bg-clip-text text-center  text-transparent md:text-9xl md:leading-tight text-6xl sm:pt-4 sm:mb-6">
+        <h1 className="bg-gradient-to-br from-white to-gray-400 bg-clip-text text-center text-transparent leading-tight text-6xl md:text-7xl lg:text-8xl xl:text-9xl pt-5 mb-10 md:mb-16 lg:mb-20 xl:mb-24">
           Ryan McGatha <br /> Software Developer
         </h1>
-        <motion.button
-          style={{
-            border,
-            boxShadow,
-          }}
-          className="group mt-5 mb-10 relative flex w-fit items-center gap-1.5 rounded-full bg-gray-950/10 px-4 py-2 text-gray-50 transition-colors hover:bg-gray-950/50 md:px-6 md:py-3 md:text-4xl md:gap-2 md:rounded-8xl md:shadow-lg sm:text-xl sm:mt-3"
-          onClick={() => {
-            window.location.href = "https://www.linkedin.com/in/ryanmcgatha/";
-          }}
-        >
-          Click For Greatness!
-        </motion.button>
       </div>
-      <LogoHero />
       <div className="z-10">
+        <LogoHero />
         <Example />
-        {/* <StackedCardTestimonials /> */}
+        <Projects />
         {/* <TerminalContact /> */}
         <HoverDevCards />
 

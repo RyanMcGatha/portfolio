@@ -11,7 +11,7 @@ import {
 const HoverDevCards = () => {
   return (
     <div className=" px-10 grid gap-8 lg:gap-4 overflow-hidden my-5">
-      <div className="grid gap-4 grid-cols-2 lg:grid-cols-2">
+      <div className="grid gap-4 grid-cols-1 lg:grid-cols-3">
         <Card
           title="LinkedIn"
           subtitle="Click Me"
@@ -24,13 +24,12 @@ const HoverDevCards = () => {
           href="https://github.com/RyanMcGatha"
           Icon={FiGithub}
         />
-        {/* <Card title="E-mail" subtitle="Click Me" href="./Email" Icon={FiMail} />
         <Card
-          title="Billing"
-          subtitle="Manage cards"
-          href="#"
-          Icon={FiCreditCard}
-        /> */}
+          title="E-mail"
+          subtitle="Click Me"
+          href="mailto:ryanmcgatha@gmail.com"
+          Icon={FiMail}
+        />
       </div>
     </div>
   );
