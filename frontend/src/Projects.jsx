@@ -162,7 +162,7 @@ export default Projects;
 
 const testimonials = [
   {
-    img: "../pushIt.png",
+    img: "../pushitV2.png",
     description:
       "Push It! is a cutting-edge real-time messaging app designed to enhance communication through instant messaging and dynamic interactions. Developed in just five days using Neurelo's platform, this app features secure user authentication and real-time updates, proving my swift adaptability and commitment to high-quality software solutions.",
     name: "Push It!",
