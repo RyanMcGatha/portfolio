@@ -13,11 +13,14 @@ function App() {
       <SideBar />
       <main>
         <Header />
-        <Hero />
+        <div className="mx-auto overflow-visible space-y-32 pb-24">
+          <Hero />
+        </div>
         <div className="mx-auto max-w-5xl overflow-visible px-4 md:px-8 space-y-32 pb-24">
           <About />
           <Projects />
           <Experience />
+
           <Contact />
         </div>
       </main>

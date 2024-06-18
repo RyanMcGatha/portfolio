@@ -1,70 +1,52 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { motion } from "framer-motion";
 import { FiArrowRight } from "react-icons/fi";
 import { twMerge } from "tailwind-merge";
 
 export const Hero = () => {
+  const projectsRef = useRef(null);
+
+  const scrollToProjects = () => {
+    if (projectsRef.current) {
+      projectsRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section className="overflow-hidden bg-zinc-950">
-      <Content />
-      <Beams />
-      <GradientGrid />
+      <div className="relative z-10">
+        <Content scrollToProjects={scrollToProjects} />
+        <Beams />
+        <GradientGrid />
+      </div>
+      <div ref={projectsRef} className="projects-section"></div>
     </section>
   );
 };
 
-const Content = () => {
+const Content = ({ scrollToProjects }) => {
   return (
     <div className="relative z-20 mx-auto flex max-w-6xl flex-col items-center justify-center px-4 py-24 md:px-8 md:py-36">
       <motion.div
-        initial={{
-          y: 25,
-          opacity: 0,
-        }}
-        animate={{
-          y: 0,
-          opacity: 1,
-        }}
-        transition={{
-          duration: 1.25,
-          ease: "easeInOut",
-        }}
+        initial={{ y: 25, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 1.25, ease: "easeInOut" }}
         className="relative"
       >
         <GlowingChip>Welcome to my portfolio 🎉</GlowingChip>
       </motion.div>
       <motion.h1
-        initial={{
-          y: 25,
-          opacity: 0,
-        }}
-        animate={{
-          y: 0,
-          opacity: 1,
-        }}
-        transition={{
-          duration: 1.25,
-          delay: 0.25,
-          ease: "easeInOut",
-        }}
+        initial={{ y: 25, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 1.25, delay: 0.25, ease: "easeInOut" }}
         className="mb-3 text-center text-3xl font-bold leading-tight text-zinc-50 sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight lg:text-7xl lg:leading-tight"
       >
         Hi, I'm Ryan McGatha, Full Stack Developer
       </motion.h1>
       <motion.p
-        initial={{
-          y: 25,
-          opacity: 0,
-        }}
-        animate={{
-          y: 0,
-          opacity: 1,
-        }}
-        transition={{
-          duration: 1.25,
-          delay: 0.5,
-          ease: "easeInOut",
-        }}
+        initial={{ y: 25, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 1.25, delay: 0.5, ease: "easeInOut" }}
         className="mb-9 max-w-2xl text-center text-base leading-relaxed text-zinc-400 sm:text-lg md:text-lg md:leading-relaxed"
       >
         I specialize in building dynamic and responsive web applications using
@@ -72,28 +54,18 @@ const Content = () => {
         and get to know more about my work.
       </motion.p>
       <motion.div
-        initial={{
-          y: 25,
-          opacity: 0,
-        }}
-        animate={{
-          y: 0,
-          opacity: 1,
-        }}
-        transition={{
-          duration: 1.25,
-          delay: 0.75,
-          ease: "easeInOut",
-        }}
+        initial={{ y: 25, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 1.25, delay: 0.75, ease: "easeInOut" }}
         className="flex flex-col items-center gap-6 sm:flex-row"
       >
-        <SplashButton className="flex items-center gap-2">
-          View My Projects
+        <SplashButton
+          className="flex items-center gap-2"
+          onClick={scrollToProjects}
+        >
+          Learn more about me
           <FiArrowRight />
         </SplashButton>
-        <GhostButton className="rounded-md px-4 py-2 text-zinc-100">
-          Learn More About Me
-        </GhostButton>
       </motion.div>
     </div>
   );
@@ -112,7 +84,7 @@ const SplashButton = ({ children, className, ...rest }) => {
   return (
     <button
       className={twMerge(
-        "rounded-md bg-gradient-to-br from-blue-400 to-blue-700 px-4 py-2 text-zinc-50 ring-2 ring-blue-500/50 ring-offset-2 ring-offset-zinc-950 transition-all hover:scale-[1.02] hover:ring-transparent active:scale-[0.98] active:ring-blue-500/70",
+        "rounded-md bg-gradient-to-br from-indigo-400 to-indigo-700 px-4 py-2 text-zinc-50 ring-2 ring-indigo-500/50 ring-offset-2 ring-offset-zinc-950 transition-all hover:scale-[1.02] hover:ring-transparent active:scale-[0.98] active:ring-indigo-500/70",
         className
       )}
       {...rest}
@@ -136,7 +108,7 @@ const GhostButton = ({ children, className, ...rest }) => {
   );
 };
 
-const Beams = () => {
+export const Beams = () => {
   const { width } = useWindowSize();
 
   const numColumns = width ? Math.floor(width / GRID_BOX_SIZE) : 0;
@@ -251,12 +223,12 @@ const Beam = ({ top, left, transition = {} }) => {
         top,
         left,
       }}
-      className="absolute z-10 h-[64px] w-[1px] bg-gradient-to-b from-blue-500/0 to-blue-500"
+      className="absolute z-10 h-[64px] w-[1px] bg-gradient-to-b from-indigo-500/0 to-indigo-500"
     />
   );
 };
 
-const GradientGrid = () => {
+export const GradientGrid = () => {
   return (
     <motion.div
       initial={{

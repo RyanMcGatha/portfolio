@@ -51,8 +51,7 @@ const projects = [
       <>
         <p>
           The Internal Franchise Document Management System is designed to
-          streamline operations and support franchise expansion, enhancing
-          process efficiency by 30%.
+          streamline operations and support franchise expansion.
         </p>
         <p>
           The tech stack includes React.js for the frontend, PostgreSQL for

@@ -19,7 +19,7 @@ const experience = [
     time: "2022 - 2023",
     location: "Greenville, SC",
     description:
-      "Contracted to develop an Internal Franchise Document Management System to streamline operations and support franchise expansion, enhancing process efficiency by 30%.",
+      "Contracted to develop an Internal Franchise Document Management System to streamline operations and support franchise expansion.",
     tech: ["React.js", "PostgreSQL", "Tailwind CSS", "Supabase", "GitHub"],
   },
 

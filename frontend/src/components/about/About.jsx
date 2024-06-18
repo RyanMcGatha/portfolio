@@ -12,7 +12,7 @@ export const About = () => {
         <div className="space-y-4">
           <Reveal>
             <p className="leading-relaxed text-zinc-300">
-              <span className="bg-indigo-500 text-white py-2 px-3 rounded font-bold mr-1 float-left text-2xl">
+              <span className=" bg-indigo-500  text-white py-2 px-3 rounded font-bold mr-1 float-left text-2xl">
                 H
               </span>
               ey! I&apos;m Ryan, if you haven&apos;t already gathered that by
