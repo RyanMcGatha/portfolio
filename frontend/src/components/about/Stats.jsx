@@ -7,45 +7,31 @@ export const Stats = () => {
     <div className="relative">
       <Reveal>
         <div>
-          <h4 className="flex items-center mb-6">
-            <AiFillCode className="text-indigo-500 text-2xl" />
-            <span className="font-bold ml-2">Use at work</span>
+          <h4 className="flex items-center mb-6 text-3xl">
+            <AiFillCode className="text-indigo-500 text-4xl" />
+            <span className="font-bold ml-2">Technologies I Work With</span>
           </h4>
-          <div className="flex flex-wrap gap-2 mb-12">
+          <div className="flex flex-wrap gap-4 mb-12 text-lg">
             <Chip>JavaScript</Chip>
-            <Chip>TypeScript</Chip>
+            <Chip>React</Chip>
             <Chip>HTML</Chip>
             <Chip>CSS</Chip>
-            <Chip>React</Chip>
-            <Chip>Redux</Chip>
-            <Chip>NodeJS</Chip>
-            <Chip>Express</Chip>
-            <Chip>Postgres</Chip>
-            <Chip>MongoDB</Chip>
+            <Chip>Node.js</Chip>
+            <Chip>Express.js</Chip>
+            <Chip>PostgreSQL</Chip>
             <Chip>GitHub</Chip>
-            <Chip>Jira</Chip>
-            <Chip>Heroku</Chip>
-            <Chip>AWS</Chip>
-          </div>
-        </div>
-      </Reveal>
-      <Reveal>
-        <div>
-          <h4 className="flex items-center mb-6">
-            <AiFillSmile className="text-indigo-500 text-2xl" />
-            <span className="font-bold ml-2">Use for fun</span>
-          </h4>
-          <div className="flex flex-wrap gap-2 mb-12">
-            <Chip>Rust</Chip>
-            <Chip>Tailwind</Chip>
-            <Chip>Java</Chip>
-            <Chip>Spring</Chip>
-            <Chip>Figma</Chip>
-            <Chip>Whimsical</Chip>
-            <Chip>Planetscale</Chip>
-            <Chip>GraphQL</Chip>
-            <Chip>Python</Chip>
+            <Chip>Netlify</Chip>
+            <Chip>Vercel</Chip>
+            <Chip>Tailwind CSS</Chip>
+            <Chip>REST API</Chip>
+            <Chip>JWT</Chip>
             <Chip>FastAPI</Chip>
+            <Chip>Python</Chip>
+            <Chip>React Router</Chip>
+            <Chip>TypeScript</Chip>
+            <Chip>Firebase</Chip>
+            <Chip>AWS</Chip>
+            <Chip>Postman</Chip>
           </div>
         </div>
       </Reveal>

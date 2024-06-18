@@ -15,28 +15,28 @@ export const Contact = () => {
           <p className="text-center my-8 text-zinc-300 leading-relaxed">
             Shoot me an email if you want to connect! You can also find me on{" "}
             <Link
-              href="https://www.linkedin.com"
+              to="https://www.linkedin.com/in/ryanmcgatha"
               target="_blank"
               className="text-indigo-300 hover:underline"
             >
-              Linkedin
+              LinkedIn
             </Link>{" "}
             or{" "}
             <Link
-              href="https://www.twitter.com"
+              to="https://github.com/RyanMcGatha"
               target="_blank"
               className="text-indigo-300 hover:underline"
             >
-              Twitter
+              GitHub
             </Link>{" "}
             if that&apos;s more your speed.
           </p>
         </Reveal>
         <Reveal width="w-full">
-          <Link href="mailto:bob.ross@notreal.com">
+          <Link to="mailto:ryanmcgatha@gmail.com">
             <div className="flex items-center justify-center gap-2 w-fit text-lg md:text-2xl whitespace-normal mx-auto hover:text-indigo-300 transition-colors">
               <AiFillMail />
-              <span>bob@notreal.com</span>
+              <span>ryanmcgatha@gmail.com</span>
             </div>
           </Link>
         </Reveal>

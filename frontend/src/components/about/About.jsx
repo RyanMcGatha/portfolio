@@ -15,32 +15,32 @@ export const About = () => {
               <span className="bg-indigo-500 text-white py-2 px-3 rounded font-bold mr-1 float-left text-2xl">
                 H
               </span>
-              ey! I&apos;m Bob, if you haven&apos;t already gathered that by
-              now. I&apos;m a painter turned software engineer from Daytona,
-              Florida. I specialize in the backend, primarily Node and Rust, but
-              love building with whatever tools are right for the job.
+              ey! I&apos;m Ryan, if you haven&apos;t already gathered that by
+              now. I specialize in frontend development, primarily React.js, but
+              I also have experience with backend technologies like Node.js and
+              Express.js. I live in Greenville, SC.
             </p>
           </Reveal>
           <Reveal>
             <p className="leading-relaxed text-zinc-300">
-              I currently work for Google on Google Photos. I also toss in my ¢2
-              with the design systems teams from time to time (once an artist,
-              always an artist, amirite?).
+              I&apos;m currently working on several projects, including a chat
+              application called Push It. I enjoy taking on new challenges and
+              learning new technologies to build efficient and scalable
+              applications.
             </p>
           </Reveal>
           <Reveal>
             <p className="leading-relaxed text-zinc-300">
-              Outside of work, I still love to paint. Any given Sunday
-              you&apos;ll find me scribbling some happy clouds with my son ☁️ I
-              even teach courses online if you&apos;re looking to learn!
+              Outside of coding, I have a passion for fishing and often spend my
+              weekends on the water. I also enjoy tinkering with my vehicle’s
+              sound system and exploring the latest tech gadgets.
             </p>
           </Reveal>
           <Reveal>
             <p className="leading-relaxed text-zinc-300">
-              I&apos;m passively looking for new positions where I can merge my
-              love for code with my love for the canvas. If you think
-              you&apos;ve got an opening that I might like, let&apos;s connect
-              🔗
+              I&apos;m actively looking for new opportunities where I can
+              leverage my skills in web development. If you have an opening that
+              you think I&apos;d be a good fit for, let&apos;s connect 🔗
             </p>
           </Reveal>
           <Reveal>

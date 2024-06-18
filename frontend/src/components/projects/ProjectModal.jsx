@@ -64,7 +64,7 @@ export const ProjectModal = ({
                 target="_blank"
                 rel="nofollow"
                 className="text-zinc-300 hover:text-indigo-300 transition-colors flex items-center gap-1"
-                href={code}
+                to={code}
               >
                 <AiFillGithub /> Source Code
               </Link>
@@ -72,7 +72,7 @@ export const ProjectModal = ({
                 target="_blank"
                 rel="nofollow"
                 className="text-zinc-300 hover:text-indigo-300 transition-colors flex items-center gap-1"
-                href={projectLink}
+                to={projectLink}
               >
                 <AiOutlineExport /> Live Project
               </Link>
@@ -85,6 +85,5 @@ export const ProjectModal = ({
 
   if (!isOpen) return <></>;
 
-  // @ts-ignore
   return ReactDOM.createPortal(content, document.getElementById("root"));
 };

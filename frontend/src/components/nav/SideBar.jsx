@@ -23,6 +23,10 @@ export const SideBar = () => {
     const observer = new IntersectionObserver(callback, options);
 
     sections.forEach((section) => observer.observe(section));
+
+    return () => {
+      sections.forEach((section) => observer.unobserve(section));
+    };
   }, []);
 
   return (
@@ -40,6 +44,7 @@ export const SideBar = () => {
         setSelected={setSelected}
         value="about"
         href="#about"
+        offset={65}
       >
         About
       </SideBarLink>
@@ -48,6 +53,7 @@ export const SideBar = () => {
         setSelected={setSelected}
         value="projects"
         href="#projects"
+        offset={65}
       >
         Projects
       </SideBarLink>
@@ -56,6 +62,7 @@ export const SideBar = () => {
         setSelected={setSelected}
         value="experience"
         href="#experience"
+        offset={65}
       >
         Exp.
       </SideBarLink>
@@ -64,6 +71,7 @@ export const SideBar = () => {
         setSelected={setSelected}
         value="contact"
         href="#contact"
+        offset={65}
       >
         Contact
       </SideBarLink>

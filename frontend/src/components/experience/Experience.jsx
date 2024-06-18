@@ -14,48 +14,29 @@ export const Experience = () => {
 
 const experience = [
   {
-    title: "Google",
-    position: "Software Engineer",
-    time: "2022 - Present",
-    location: "Atlanta",
+    title: "Sully's Steamers",
+    position: "Software Developer",
+    time: "2022 - 2023",
+    location: "Greenville, SC",
     description:
-      "I help build and scale Google Photos. Increased throughput of our primary services by 70%. Migrated backend service from Java to Go. Also helped make it look prettier.",
-    tech: [
-      "Angular",
-      "Python",
-      "GCP",
-      "Git",
-      "GitHub",
-      "Java",
-      "Golang",
-      "K8s",
-    ],
+      "Contracted to develop an Internal Franchise Document Management System to streamline operations and support franchise expansion, enhancing process efficiency by 30%.",
+    tech: ["React.js", "PostgreSQL", "Tailwind CSS", "Supabase", "GitHub"],
   },
+
   {
-    title: "Facebook",
-    position: "Software Engineer",
-    time: "2020 - 2022",
-    location: "San Francisco",
+    title: "Carolina Code School",
+    position: "Full Stack Web Development Student",
+    time: "January 2024 - March 2024",
+    location: "Greenville, SC",
     description:
-      "Senior Full Stack Engineer for Facebook Marketplace. Created a service from scratch to handle new listings. Also played some ping pong. It was fun.",
-    tech: ["React", "Node", "PHP", "GraphQL", "Presto", "Cassandra"],
-  },
-  {
-    title: "Amazon",
-    position: "Software Engineer",
-    time: "2016 - 2020",
-    location: "Seattle",
-    description:
-      "Data Engineer for store front. Built data pipelines with Spark and Airflow. Saw Bezos one time. He said he liked my paintings. I said I liked his hair.",
+      "Completed a rigorous full-stack web development program, gaining proficiency in technologies such as React.js, PostgreSQL, and Tailwind CSS. Engaged in hands-on projects simulating real-world software development challenges.",
     tech: [
-      "Java",
-      "Python",
-      "S3",
-      "RDS",
-      "Redshift",
-      "PySpark",
-      "HDFS",
-      "Apache Airflow",
+      "React.js",
+      "PostgreSQL",
+      "Tailwind CSS",
+      "HTML",
+      "CSS",
+      "JavaScript",
     ],
   },
 ];
