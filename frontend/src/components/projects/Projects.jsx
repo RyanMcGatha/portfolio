@@ -24,17 +24,17 @@ const projects = [
     projectLink: "https://push-it.netlify.app",
     tech: ["React.js", "PostgreSQL", "Node.js", "Express.js", "JWT"],
     description:
-      "Developed and launched 'Push It!', a real-time messaging app featuring secure registrations and dynamic messaging.",
+      "Created 'Push It!', a real-time messaging application offering secure user registration and dynamic messaging capabilities.",
     modalContent: (
       <>
         <p>
-          "Push It!" is a real-time messaging app developed and launched using
-          React.js, PostgreSQL, Node.js, Express.js, and JWT. It features secure
-          registrations and dynamic messaging.
+          "Push It!" is a real-time messaging application developed with
+          React.js, PostgreSQL, Node.js, Express.js, and JWT. It offers secure
+          user registration and dynamic messaging features.
         </p>
         <p>
-          This project highlighted my ability to rapidly learn and implement new
-          technologies, showcasing my skills in full-stack development.
+          This project showcases my ability to quickly learn and apply new
+          technologies, demonstrating my skills in full-stack development.
         </p>
       </>
     ),
@@ -46,7 +46,7 @@ const projects = [
     projectLink: "https://document-management-system.example.com",
     tech: ["React.js", "PostgreSQL", "Tailwind CSS", "Supabase"],
     description:
-      "Developed a robust document management system that enhanced operational efficiency and supported franchise expansion.",
+      "Developed a comprehensive document management system to enhance operational efficiency and support franchise expansion.",
     modalContent: (
       <>
         <p>
@@ -54,13 +54,10 @@ const projects = [
           streamline operations and support franchise expansion.
         </p>
         <p>
-          The tech stack includes React.js for the frontend, PostgreSQL for
-          database management, Tailwind CSS for styling, and Supabase for
-          backend services.
-        </p>
-        <p>
-          This project was a significant contribution to the operational
-          efficiency of the company.
+          Utilizing React.js for the frontend, PostgreSQL for database
+          management, Tailwind CSS for styling, and Supabase for backend
+          services, this project significantly improved the company's
+          operational efficiency.
         </p>
       </>
     ),
@@ -72,13 +69,13 @@ const projects = [
     projectLink: "https://fastapi-tutorial.netlify.app/",
     tech: ["Python", "FastAPI", "PostgreSQL"],
     description:
-      "A tutorial project demonstrating the use of FastAPI with PostgreSQL. This project includes a preset API route with drop-down menus to change different parts of the API request.",
+      "Developed a tutorial project demonstrating the use of FastAPI with PostgreSQL, including a preset API route with customizable request parameters.",
     modalContent: (
       <>
         <p>
           The FastAPI Tutorial project demonstrates the use of FastAPI with
-          PostgreSQL. It includes a preset API route with drop-down menus to
-          change different parts of the API request.
+          PostgreSQL. It features a preset API route with drop-down menus to
+          customize different parts of the API request.
         </p>
         <p>
           This project is designed to teach students how to build efficient and
