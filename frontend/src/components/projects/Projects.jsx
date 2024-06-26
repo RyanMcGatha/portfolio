@@ -20,7 +20,7 @@ const projects = [
   {
     title: "Push It! Real-Time Messaging App",
     imgSrc: "/pushit.dev.png",
-    code: "https://github.com/RyanMcGatha/Push-It",
+    code: "https://github.com/RyanMcGatha/Push-It---Messaging-App",
     projectLink: "https://push-it.netlify.app",
     tech: ["React.js", "PostgreSQL", "Node.js", "Express.js", "JWT"],
     description:
@@ -42,8 +42,8 @@ const projects = [
   {
     title: "Internal Franchise Document Management System",
     imgSrc: "/steamyfiles.png",
-    code: "https://github.com/RyanMcGatha/Document-Management-System",
-    projectLink: "https://document-management-system.example.com",
+    code: "https://github.com/RyanMcGatha/sullys-franchise-management-system",
+    projectLink: "https://steamyfiles.com/",
     tech: ["React.js", "PostgreSQL", "Tailwind CSS", "Supabase"],
     description:
       "Developed a comprehensive document management system to enhance operational efficiency and support franchise expansion.",
