@@ -6,7 +6,7 @@ import { Hero } from "./components/hero/Hero";
 import { Projects } from "./components/projects/Projects";
 import { Experience } from "./components/experience/Experience";
 import { Contact } from "./components/contact/Contact";
-
+import ChippChatWidget from "./components/Widget";
 function App() {
   return (
     <div className="grid grid-cols-[54px_1fr]">
@@ -22,6 +22,9 @@ function App() {
           <Experience />
 
           <Contact />
+        </div>
+        <div className="max-w-1 mx-auto">
+          <ChippChatWidget />
         </div>
       </main>
     </div>
