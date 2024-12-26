@@ -15,32 +15,32 @@ export const About = () => {
               <span className=" bg-indigo-500  text-white py-2 px-3 rounded font-bold mr-1 float-left text-2xl">
                 H
               </span>
-              ey! I'm Ryan McGatha, a passionate software developer with a knack
-              for creating efficient and innovative web applications. My journey
-              in web development began at Carolina Code School, where I
-              completed a comprehensive Full Stack Web Development course,
-              equipping me with a solid foundation in technologies like
-              React.js, Python, and PostgreSQL.
+              ey! I'm Ryan McGatha, a Full-stack Software Engineer focused on
+              building scalable applications and optimizing user experiences. I
+              specialize in integrating third-party APIs, managing data
+              pipelines, and enhancing both front-end and back-end performance.
+              I'm passionate about writing clean code, streamlining workflows,
+              and collaborating to deliver high-quality products.
             </p>
           </Reveal>
           <Reveal>
             <p className="leading-relaxed text-zinc-300">
-              I specialize in building dynamic and responsive web applications,
-              leveraging my skills in React, Express.js, Node.js, and
-              PostgreSQL. One of my notable projects is the Push It chat
-              application, which showcases my ability to develop complex
-              messaging systems with real-time updates and secure,
-              user-protected chats.
+              Currently working as a Software Engineering Intern at Chipp AI,
+              I've been instrumental in developing features like dynamic URL
+              crawlers, third-party API integrations, and enhanced user
+              management systems. My experience includes building scalable
+              solutions using modern technologies like React.js, Node.js, and
+              PostgreSQL.
             </p>
           </Reveal>
           <Reveal>
             <p className="leading-relaxed text-zinc-300">
-              In addition to my technical expertise, I've worked on various
-              projects that demonstrate my ability to learn and adapt quickly
-              under pressure. For instance, I was contracted to build an
-              Internal Franchise Document Management System app for Sully's
-              Steamers, where I played a pivotal role in its development and
-              deployment.
+              I've also worked as a Contract Software Developer for Sully's
+              Steamers, where I developed a comprehensive Franchise Document
+              Management System that streamlined their operations. My background
+              in full-stack development, combined with my recent training at
+              Carolina Code School, has equipped me with a strong foundation in
+              modern web technologies.
             </p>
           </Reveal>
           <Reveal>
